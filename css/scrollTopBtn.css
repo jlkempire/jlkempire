@@ -22,3 +22,10 @@
 #scrollTopBtn:hover .arrow {
   color: white;
 }
+
+/* Hide the button on screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  #scrollTopBtn {
+    display: none !important;
+  }
+}
