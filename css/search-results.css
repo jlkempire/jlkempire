@@ -826,3 +826,16 @@ input {
   overflow: hidden;
   text-overflow: ellipsis; /* Adds ... if the name is too long */
 }
+
+.copy-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.footer-col-4 ul li ion-icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s; /* smooth hover effect */
+  color: white;
+}
