@@ -1,0 +1,3216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JLK Empire</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/scrollTopBtn.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/header.css" />
+
+    <!-- Add Clerk Script -->
+    <!-- <script
+      async
+      crossorigin="anonymous"
+      data-clerk-publishable-key="pk_test_c21hc2hpbmctaGFsaWJ1dC04LmNsZXJrLmFjY291bnRzLmRldiQ"
+      src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"></script> -->
+  </head>
+  <body>
+    <div class="container">
+      <!-- navebar -->
+      <div class="min-container-navbar">
+        <div class="navbar">
+          <!-- Logo -->
+          <a href="index.html">
+            <img class="logo-icon" src="logo/JLK-LOGO.png" width="45px" />
+          </a>
+
+          <!-- Search -->
+          <div class="search-box">
+            <input
+              id="mainSearchInput"
+              type="text"
+              placeholder="Search for products, brands and categories..."
+              autocomplete="off" />
+            <div id="searchSuggestions" class="suggestions-dropdown"></div>
+          </div>
+
+          <ion-icon
+            id="searchIconBtn"
+            class="search-icon"
+            name="search-outline"
+            style="cursor: pointer"></ion-icon>
+
+          <!-- Account -->
+          <!-- <div class="drop-menu" id="accountToggle">
+            <ion-icon name="person-outline"></ion-icon>
+            <p id="accountName">Account</p>
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </div> -->
+
+          <!-- <div class="account-dropdown hidden" id="accountDropdown"></div> -->
+
+          <!-- Right side -->
+          <div class="nav-right">
+            <!-- Cart -->
+            <a href="cart.html" class="cart">
+              <ion-icon name="cart-outline" style="font-size: 23px"></ion-icon>
+              <span class="cart-count">0</span>
+              <p>Cart</p>
+            </a>
+
+            <!-- Login Modal -->
+            <!-- <div id="loginModal" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="closeLogin()">&times;</span>
+
+                <h2>Please Your Details</h2>
+                <p class="subtitle">Click continue to Sign in or Sign up!</p>
+
+                <div class="divider">
+                  <span>only</span>
+                </div>
+
+                <label>Email address</label>
+                <input
+                  type="email"
+                  id="emailInput"
+                  placeholder="Enter your email address" />
+
+                <button onclick="Clerk.openSignIn()" class="continue-btn">
+                  Continue ▶
+                </button>
+              </div>
+            </div> -->
+          </div>
+
+          <!-- Mobile menu icon -->
+          <!-- <img
+              src="images/menu.png"
+              class="menu-icon"
+              onclick="menutoggle()" />
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ROWS -->
+    <div class="row-front">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <h1>
+              Gadgets you'll love. <br />
+              Prices you'll trust.
+            </h1>
+            <p>
+              Explore cutting-edge smartphones built for speed, style, and
+              reliability. <br />Quality phones, trusted brands, and support you
+              can rely on.
+            </p>
+            <a href="#" class="btn">JLK Empire </a>
+          </div>
+
+          <div class="col-2">
+            <img src="images/iphone17-BG.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Categories -->
+    <div class="categores">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-3"><img src="Pictures/pic-1.png" /></div>
+          <div class="col-3"><img src="Pictures/pic-2.png" /></div>
+          <div class="col-3"><img src="Pictures/pic-3.png" /></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IPhone & Accessories-->
+    <div class="small-container">
+      <h2 class="title">Phones & Accessories</h2>
+      <div class="row">
+        <div class="col-4">
+          <img
+            src="Pictures/p1.png"
+            class="product-link"
+            data-id="tecno-spark-pro"
+            data-name="Tecno Spark 10 Pro - 6.8-inch display - 8GB RAM - 256GB ROM"
+            data-description="Package includes charger cord, charger head, earphones, and adaptor"
+            data-price="300000"
+            data-image="Pictures/p1.png"
+            style="cursor: pointer" />
+
+          <h4>Tecno Spark 10 Pro</h4>
+          <p>Dual SIM with 4G LTE</p>
+
+          <div class="rating">
+            <img src="stars/Stars-2.png" />
+          </div>
+
+          <p>&#8358;300,000</p>
+
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="tecno-spark-pro"
+            data-name="Tecno Spark 10 Pro - 6.8-inch display - 8GB RAM - 256GB ROM"
+            data-price="300000"
+            data-image="Pictures/p1.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p2.png"
+            class="product-link"
+            data-id="Apple-iPhone-17pro"
+            data-name="Apple iPhone 17 Pro - 256GB - Cosmic Orange E-sim"
+            data-price="1722950"
+            data-image="Pictures/p2.png"
+            style="cursor: pointer" />
+
+          <h4>Apple iPhone 17 Pro</h4>
+          <p>256GB - Cosmic Orange</p>
+          <div class="rating">
+            <img src="stars/Stars-3.png" />
+          </div>
+          <p>&#8358;1,722,950</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Apple-iPhone-17pro"
+            data-name="Apple iPhone 17 Pro - 256GB - Cosmic Orange E-sim"
+            data-price="1722950"
+            data-image="Pictures/p2.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p3.png"
+            class="product-link"
+            data-id="iPhone12-Pro-Max"
+            data-name="Apple iPhone 12 Pro Max - 6.7-inch - 128GB ROM+6GB RAM - Single Sim - 3687mah - Pouch & Screen Protector-Graphite"
+            data-price="629000"
+            data-image="Pictures/p3.png"
+            style="cursor: pointer" />
+
+          <h4>Apple iPhone 12 Pro Max</h4>
+          <p>128GB ROM+6GB RAM</p>
+          <div class="rating">
+            <img src="stars/Stars-3.png" />
+          </div>
+          <p>&#8358;629,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="iPhone12-Pro-Max"
+            data-name="Apple iPhone 12 Pro Max - 6.7-inch - 128GB ROM+6GB RAM - Single Sim - 3687mah - Pouch & Screen Protector-Graphite"
+            data-price="629000"
+            data-image="Pictures/p3.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p4.png"
+            class="product-link"
+            data-id="apple-iphone-15pro-max"
+            data-name="Apple iPhone 15 Pro Max - 6.7-inch 256GB ROM - 8GB RAM - 1 Sim + Esim -5g - 4441mAh"
+            data-price="1389999"
+            data-image="Pictures/p4.png"
+            style="cursor: pointer" />
+
+          <h4>Apple iPhone 15 Pro Max</h4>
+          <p>256GB ROM - 8GB RAM</p>
+          <div class="rating">
+            <img src="stars/Stars-3.png" />
+          </div>
+          <p>&#8358;1,389,999</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="apple-iphone-15pro-max"
+            data-name="Apple iPhone 15 Pro Max - 6.7-inch 256GB ROM - 8GB RAM - 1 Sim + Esim -5g - 4441mAh"
+            data-price="1389999"
+            data-image="Pictures/p4.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p5.png"
+            class="product-link"
+            data-id="Apple-iphone-15pro"
+            data-name="Apple iPhone 15 Pro 6.1-inch - 256GB ROM + 8GB RAM - Nano Sim - 5g"
+            data-price="1179999"
+            data-image="Pictures/p5.png"
+            style="cursor: pointer" />
+
+          <h4>Apple iPhone 15 Pro</h4>
+          <p>256GB ROM + 8GB RAM</p>
+          <div class="rating">
+            <img src="stars/Stars-3.png" />
+          </div>
+          <p>&#8358;1,179,999</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Apple-iphone-15pro"
+            data-name="Apple iPhone 15 Pro 6.1-inch - 256GB ROM + 8GB RAM - Nano Sim - 5g"
+            data-price="1179999"
+            data-image="Pictures/p5.png">
+            Add to Cart
+          </a>
+        </div>
+        <!-- more here -->
+        <div class="col-4">
+          <img
+            src="Pictures/p6.png"
+            class="product-link"
+            data-id="apple-iphone-15pro"
+            data-name="Apple iPhone 15 Pro 128GB"
+            data-price="1650000"
+            data-image="Pictures/p6.png"
+            style="cursor: pointer" />
+          <h4>Apple iPhone 15 Pro</h4>
+          <p>128GB ROM + 8GB RAM</p>
+          <div class="rating">
+            <img src="stars/Stars-3.png" />
+          </div>
+          <p>&#8358;1,650,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="apple-iphone-15pro"
+            data-name="Apple iPhone 15 Pro 128GB"
+            data-price="1650000"
+            data-image="Pictures/p6.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p7.png"
+            class="product-link"
+            data-id="tecno-spark-20"
+            data-name="Tecno Spark 20 256GB"
+            data-price="215000"
+            data-image="Pictures/p7.png"
+            style="cursor: pointer" />
+          <h4>Tecno Spark 20</h4>
+          <p>256GB ROM + 8GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;215,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="tecno-spark-20"
+            data-name="Tecno Spark 20 256GB"
+            data-price="215000"
+            data-image="Pictures/p7.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p8.png"
+            class="product-link"
+            data-id="samsung-s24-ultra"
+            data-name="Samsung Galaxy S24 Ultra"
+            data-price="1850000"
+            data-image="Pictures/p8.png"
+            style="cursor: pointer" />
+          <h4>Samsung Galaxy S24 Ultra</h4>
+          <p>512GB ROM + 12GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;1,850,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="samsung-s24-ultra"
+            data-name="Samsung Galaxy S24 Ultra"
+            data-price="1850000"
+            data-image="Pictures/p8.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p9.png"
+            class="product-link"
+            data-id="infinix-note-40"
+            data-name="Infinix Note 40 Pro"
+            data-price="380000"
+            data-image="Pictures/p9.png"
+            style="cursor: pointer" />
+          <h4>Infinix Note 40 Pro</h4>
+          <p>256GB ROM + 8GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;380,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="infinix-note-40"
+            data-name="Infinix Note 40 Pro"
+            data-price="380000"
+            data-image="Pictures/p9.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p10.png"
+            class="product-link"
+            data-id="Apple-iphone-15pro"
+            data-name="Apple iPhone 15 Pro 6.1-inch - 256GB ROM + 8GB RAM"
+            data-price="1650000"
+            data-image="Pictures/p10.png"
+            style="cursor: pointer" />
+          <h4>Apple iPhone 15 Pro</h4>
+          <p>256GB ROM + 8GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;1,650,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Apple-iphone-15pro"
+            data-name="Apple iPhone 15 Pro 6.1-inch - 256GB ROM + 8GB RAM"
+            data-price="1650000"
+            data-image="Pictures/p10.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p11.png"
+            class="product-link"
+            data-id="Tecno-spark-40"
+            data-name="Tecno Spark 40 6.67-inch - 128GB ROM + 4GB RAM"
+            data-price="154999"
+            data-image="Pictures/p11.png"
+            style="cursor: pointer" />
+          <h4>Tecno Spark 40</h4>
+          <p>128GB ROM + 4GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;154,999</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Tecno-spark-40"
+            data-name="Tecno Spark 40 6.67-inch - 128GB ROM + 4GB RAM"
+            data-price="154999"
+            data-image="Pictures/p11.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p12.png"
+            class="product-link"
+            data-id="Samsung-galaxy-a07"
+            data-name="Samsung Galaxy A07 - 128GB ROM + 4GB RAM"
+            data-price="153174"
+            data-image="Pictures/p12.png"
+            style="cursor: pointer" />
+          <h4>Samsung Galaxy A07</h4>
+          <p>128GB ROM + 4GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;153,174</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Samsung-galaxy-a07"
+            data-name="Samsung Galaxy A07 - 128GB ROM + 4GB RAM"
+            data-price="153174"
+            data-image="Pictures/p12.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p13.png"
+            class="product-link"
+            data-id="Xiaomi-redmi-15c"
+            data-name="Xiaomi Redmi 15C - 128GB ROM + 6GB RAM"
+            data-price="148806"
+            data-image="Pictures/p13.png"
+            style="cursor: pointer" />
+          <h4>Xiaomi Redmi 15C</h4>
+          <p>128GB ROM + 6GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;148,806</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Xiaomi-redmi-15c"
+            data-name="Xiaomi Redmi 15C - 128GB ROM + 6GB RAM"
+            data-price="148806"
+            data-image="Pictures/p13.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p14.png"
+            class="product-link"
+            data-id="Nokia-G42-5G"
+            data-name="Nokia G42 5G - 128GB ROM + 6GB RAM - 50MP Triple Camera - So Grey"
+            data-price="345000"
+            data-image="Pictures/p14.png"
+            style="cursor: pointer" />
+
+          <h4>Nokia G42 5G</h4>
+          <p>128GB ROM + 6GB RAM</p>
+          <div class="rating">
+            <img src="stars/Stars-4.png" />
+          </div>
+          <p>&#8358;345,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Nokia-G42-5G"
+            data-name="Nokia G42 5G - 128GB ROM + 6GB RAM - 50MP Triple Camera - So Grey"
+            data-price="345000"
+            data-image="Pictures/p14.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p15.png"
+            class="product-link"
+            data-id="Poco-c85"
+            data-name="Poco C85 6.9-inch - 128GB ROM + 6GB RAM"
+            data-price="144999"
+            data-image="Pictures/p15.png"
+            style="cursor: pointer" />
+          <h4>Poco C85</h4>
+          <p>128GB ROM + 6GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;144,999</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Poco-c85"
+            data-name="Poco C85 6.9-inch - 128GB ROM + 6GB RAM"
+            data-price="144999"
+            data-image="Pictures/p15.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <!-- more -->
+        <div class="col-4">
+          <img
+            src="Pictures/p26.png"
+            class="product-link"
+            data-id="huawei-nova-12i"
+            data-name="Huawei Nova 12i - 6.7-inch Display - 8GB RAM - 256GB ROM"
+            data-description="High-resolution 108MP camera, 5000mAh battery with 40W fast charging"
+            data-price="475000"
+            data-image="Pictures/p26.png"
+            style="cursor: pointer" />
+
+          <h4>Huawei Nova 12i</h4>
+          <p>Dual SIM with 4G LTE</p>
+
+          <div class="rating">
+            <img src="stars/Stars-4.png" />
+          </div>
+
+          <p>&#8358;475,000</p>
+
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="huawei-nova-12i"
+            data-name="Huawei Nova 12i - 6.7-inch Display - 8GB RAM - 256GB ROM"
+            data-price="475000"
+            data-image="Pictures/p26.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p27.png"
+            class="product-link"
+            data-id="trifone-x801-pro"
+            data-name="Trifone X801 Pro - 8GB RAM - 128GB ROM"
+            data-description="Affordable 5G connectivity with a 5000mAh long-lasting battery"
+            data-price="122000"
+            data-image="Pictures/p27.png"
+            style="cursor: pointer" />
+
+          <h4>Trifone X801 Pro</h4>
+          <p>5G Enabled Android Phone</p>
+
+          <div class="rating">
+            <img src="stars/Stars-2.png" />
+          </div>
+
+          <p>&#8358;122,000</p>
+
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="trifone-x801-pro"
+            data-name="Trifone X801 Pro - 8GB RAM - 128GB ROM"
+            data-price="122000"
+            data-image="Pictures/p27.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p28.png"
+            class="product-link"
+            data-id="zte-nubia-focus"
+            data-name="ZTE Nubia Focus Pro 5G - 6.72-inch - 8GB RAM - 256GB ROM"
+            data-description="108MP main camera, 5G network, and stylish light brown finish"
+            data-price="225000"
+            data-image="Pictures/p28.png"
+            style="cursor: pointer" />
+
+          <h4>ZTE Nubia Focus Pro</h4>
+          <p>5G High Performance</p>
+
+          <div class="rating">
+            <img src="stars/Stars-4.png" />
+          </div>
+
+          <p>&#8358;225,000</p>
+
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="zte-nubia-focus"
+            data-name="ZTE Nubia Focus Pro 5G - 6.72-inch - 8GB RAM - 256GB ROM"
+            data-price="225000"
+            data-image="Pictures/p28.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p29.png"
+            class="product-link"
+            data-id="zte-blade-a55"
+            data-name="ZTE Blade A55 - 6.75-inch - 4GB RAM - 128GB ROM"
+            data-description="Large HD+ display with dynamic RAM expansion up to 12GB"
+            data-price="179999"
+            data-image="Pictures/p29.png"
+            style="cursor: pointer" />
+
+          <h4>ZTE Blade A55</h4>
+          <p>Large Display 4G LTE</p>
+
+          <div class="rating">
+            <img src="stars/Stars-3.png" />
+          </div>
+
+          <p>&#8358;179,999</p>
+
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="zte-blade-a55"
+            data-name="ZTE Blade A55 - 6.75-inch - 4GB RAM - 128GB ROM"
+            data-price="179999"
+            data-image="Pictures/p29.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p30.png"
+            class="product-link"
+            data-id="huawei-pura-70"
+            data-name="Huawei Pura 70 Ultra - 16GB RAM - 512GB ROM"
+            data-description="Flagship imaging with pop-out camera and ultra-durable Kunlun glass"
+            data-price="1450000"
+            data-image="Pictures/p30.png"
+            style="cursor: pointer" />
+
+          <h4>Huawei Pura 70 Ultra</h4>
+          <p>Premium Flagship Dual SIM</p>
+
+          <div class="rating">
+            <img src="stars/Stars-4.png" />
+          </div>
+
+          <p>&#8358;1,450,000</p>
+
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="huawei-pura-70"
+            data-name="Huawei Pura 70 Ultra - 16GB RAM - 512GB ROM"
+            data-price="1450000"
+            data-image="Pictures/p30.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <!-- 1. Infinix Note 60 Pro -->
+        <div class="col-4">
+          <img
+            src="Pictures/p31.png"
+            class="product-link"
+            data-id="infinix-note-60-pro"
+            data-name="Infinix Note 60 Pro - 6.78-inch - 8GB RAM - 256GB ROM"
+            data-description="108MP AI Triple Camera, 120Hz AMOLED display, 6500mAh battery"
+            data-price="731500"
+            data-image="Pictures/p31.png"
+            style="cursor: pointer" />
+
+          <h4>Infinix Note 60 Pro</h4>
+          <p>5G High Performance</p>
+
+          <div class="rating">
+            <img src="stars/Stars-2.png" />
+          </div>
+
+          <p>&#8358;731,500</p>
+
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="infinix-note-60-pro"
+            data-name="Infinix Note 60 Pro - 6.78-inch - 8GB RAM - 256GB ROM"
+            data-price="731500"
+            data-image="Pictures/p31.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <!-- 2. Infinix Smart 20 -->
+        <div class="col-4">
+          <img
+            src="Pictures/p32.png"
+            class="product-link"
+            data-id="infinix-smart-20"
+            data-name="Infinix Smart 20 - 6.78-inch - 4GB RAM - 64GB ROM"
+            data-description="Android 16, 5200mAh battery, 120Hz IPS display"
+            data-price="159999"
+            data-image="Pictures/p32.png"
+            style="cursor: pointer" />
+
+          <h4>Infinix Smart 20</h4>
+          <p>Dual SIM with 4G LTE</p>
+
+          <div class="rating">
+            <img src="stars/Stars-4.png" />
+          </div>
+
+          <p>&#8358;159,999</p>
+
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="infinix-smart-20"
+            data-name="Infinix Smart 20 - 6.78-inch - 4GB RAM - 64GB ROM"
+            data-price="159999"
+            data-image="Pictures/p32.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <!-- 3. Tecno Camon 50 Pro -->
+        <div class="col-4">
+          <img
+            src="Pictures/p33.png"
+            class="product-link"
+            data-id="tecno-camon-50-pro"
+            data-name="Tecno Camon 50 Pro - 6.78-inch - 12GB RAM - 256GB ROM"
+            data-description="Sony LYTIA 700C Camera, 144Hz AMOLED, 45W Fast Charging"
+            data-price="499000"
+            data-image="Pictures/p33.png"
+            style="cursor: pointer" />
+
+          <h4>Tecno Camon 50 Pro</h4>
+          <p>Professional Imaging 5G</p>
+
+          <div class="rating">
+            <img src="stars/Stars-4.png" />
+          </div>
+
+          <p>&#8358;499,000</p>
+
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="tecno-camon-50-pro"
+            data-name="Tecno Camon 50 Pro - 6.78-inch - 12GB RAM - 256GB ROM"
+            data-price="499000"
+            data-image="Pictures/p33.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <!-- 4. Tecno Camon 50 -->
+        <div class="col-4">
+          <img
+            src="Pictures/p34.png"
+            class="product-link"
+            data-id="tecno-camon-50"
+            data-name="Tecno Camon 50 - 6.78-inch - 8GB RAM - 256GB ROM"
+            data-description="50MP OIS Camera, Helio G200 Ultimate, 6150mAh Battery"
+            data-price="447000"
+            data-image="Pictures/p34.png"
+            style="cursor: pointer" />
+
+          <h4>Tecno Camon 50</h4>
+          <p>Ultra Battery 4G/5G</p>
+
+          <div class="rating">
+            <img src="stars/Stars-3.png" />
+          </div>
+
+          <p>&#8358;447,000</p>
+
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="tecno-camon-50"
+            data-name="Tecno Camon 50 - 6.78-inch - 8GB RAM - 256GB ROM"
+            data-price="447000"
+            data-image="Pictures/p34.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <!-- 5. Infinix Note 60 Pro (Mist Titanium variant) -->
+        <div class="col-4">
+          <img
+            src="Pictures/p35.png"
+            class="product-link"
+            data-id="infinix-note-60-pro-titanium"
+            data-name="Infinix Note 60 Pro - Mist Titanium - 8GB RAM - 256GB"
+            data-description="Special Edition Finish, Android 16, 120Hz Display"
+            data-price="690000"
+            data-image="Pictures/p35.png"
+            style="cursor: pointer" />
+
+          <h4>Infinix Note 60 Pro</h4>
+          <p>Titanium Edition</p>
+
+          <div class="rating">
+            <img src="stars/Stars-1.png" />
+          </div>
+
+          <p>&#8358;690,000</p>
+
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="infinix-note-60-pro-titanium"
+            data-name="Infinix Note 60 Pro - Mist Titanium - 8GB RAM - 256GB"
+            data-price="690000"
+            data-image="Pictures/p35.png">
+            Add to Cart
+          </a>
+        </div>
+      </div>
+
+      <!-- Computers & Tech Accessories -->
+      <h2 class="title">Computers & Tech Accessories</h2>
+      <div class="row">
+        <div class="col-4">
+          <img
+            src="Pictures/p16.png"
+            class="product-link"
+            data-id="hp-pavilion-15"
+            data-name="HP Pavilion 15 Laptop"
+            data-price="850000"
+            data-image="Pictures/p16.png"
+            style="cursor: pointer" />
+          <h4>HP Pavilion 15</h4>
+          <p>Intel Core i5 - 1TB SSD - 16GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;850,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="hp-pavilion-15"
+            data-name="HP Pavilion 15 Laptop"
+            data-price="850000"
+            data-image="Pictures/p16.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p17.png"
+            class="product-link"
+            data-id="dell-latitude-3420"
+            data-name="Dell Latitude 3420"
+            data-price="720000"
+            data-image="Pictures/p17.png"
+            style="cursor: pointer" />
+          <h4>Dell Latitude 3420</h4>
+          <p>Intel Core i5 - 512GB SSD - 8GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;720,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="dell-latitude-3420"
+            data-name="Dell Latitude 3420"
+            data-price="720000"
+            data-image="Pictures/p17.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p18.png"
+            class="product-link"
+            data-id="HP-elitebook-1040-g9"
+            data-name="HP Elitebook 1040 G9 - Intel Core i7 - 16GB RAM - 512GB SSD"
+            data-price="1313110"
+            data-image="Pictures/p18.png"
+            style="cursor: pointer" />
+          <h4>HP Elitebook 1040 G9</h4>
+          <p>Core i7 - 16GB RAM - 512GB SSD</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;1,313,110</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="HP-elitebook-1040-g9"
+            data-name="HP Elitebook 1040 G9 - Intel Core i7 - 16GB RAM - 512GB SSD"
+            data-price="1313110"
+            data-image="Pictures/p18.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p19.png"
+            class="product-link"
+            data-id="Asus-vivobook-15"
+            data-name="Asus Vivobook 15 - Intel Core i5 - 8GB RAM - 512GB SSD"
+            data-price="645700"
+            data-image="Pictures/p19.png"
+            style="cursor: pointer" />
+          <h4>Asus Vivobook 15</h4>
+          <p>Core i5 - 8GB RAM - 512GB SSD</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;645,700</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Asus-vivobook-15"
+            data-name="Asus Vivobook 15 - Intel Core i5 - 8GB RAM - 512GB SSD"
+            data-price="645700"
+            data-image="Pictures/p19.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p20.png"
+            class="product-link"
+            data-id="Samsung-galaxy-book5-pro"
+            data-name="Samsung Galaxy Book5 Pro 360 - Intel Ultra - 16GB RAM"
+            data-price="4200000"
+            data-image="Pictures/p20.png"
+            style="cursor: pointer" />
+          <h4>Samsung Galaxy Book5 Pro</h4>
+          <p>Intel Ultra - 16GB RAM - Touch</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;4,200,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Samsung-galaxy-book5-pro"
+            data-name="Samsung Galaxy Book5 Pro 360 - Intel Ultra - 16GB RAM"
+            data-price="4200000"
+            data-image="Pictures/p20.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/p25.png"
+            class="product-link"
+            data-id="Lenovo-Ideapad-Slim3"
+            data-name="Lenovo IdeaPad Slim 3 - Intel Core i3 - 256GB SSD + 8GB RAM - Windows 11"
+            data-price="585000"
+            data-image="Pictures/p25.png"
+            style="cursor: pointer" />
+
+          <h4>Lenovo IdeaPad Slim 3</h4>
+          <p>Core i3 - 256GB SSD + 8GB RAM</p>
+          <div class="rating">
+            <img src="stars/Stars-4.png" />
+          </div>
+          <p>&#8358;585,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Lenovo-Ideapad-Slim3"
+            data-name="Lenovo IdeaPad Slim 3 - Intel Core i3 - 256GB SSD + 8GB RAM - Windows 11"
+            data-price="585000"
+            data-image="Pictures/p25.png">
+            Add to Cart
+          </a>
+        </div> -->
+        <!-- more -->
+        <!-- Row 1: Apple MacBooks -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/macbook-air-m3.png"
+            class="product-link"
+            data-id="apple-mac-air-m3"
+            data-name="Apple MacBook Air - M3 Chip - 13.6-inch - 16GB RAM - 256GB SSD"
+            data-description="Liquid Retina display, 1080p FaceTime HD camera, MagSafe charging"
+            data-price="1526500"
+            data-image="Pictures/macbook-air-m3.png"
+            style="cursor: pointer" />
+          <h4>MacBook Air M3</h4>
+          <p>Apple M3 Chip 2025</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;1,526,500</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="apple-mac-air-m3"
+            data-name="Apple MacBook Air - M3 Chip - 13.6-inch - 16GB RAM - 256GB SSD"
+            data-price="1526500"
+            data-image="Pictures/macbook-air-m3.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/macbook-pro-m3-14.png"
+            class="product-link"
+            data-id="apple-mac-pro-14"
+            data-name="Apple MacBook Pro 14-inch - M3 Chip - 18GB RAM - 512GB SSD"
+            data-description="M3 Chip with 8-core CPU and 10-core GPU, Space Gray"
+            data-price="3097000"
+            data-image="Pictures/macbook-pro-m3-14.png"
+            style="cursor: pointer" />
+          <h4>MacBook Pro 14"</h4>
+          <p>M3 Pro Performance</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;3,097,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="apple-mac-pro-14"
+            data-name="Apple MacBook Pro 14-inch - M3 Chip - 18GB RAM - 512GB SSD"
+            data-price="3097000"
+            data-image="Pictures/macbook-pro-m3-14.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/macbook-air-m4.png"
+            class="product-link"
+            data-id="apple-mac-air-m4"
+            data-name="Apple MacBook Air 15-inch (2025) - M4 Chip - 16GB RAM - 512GB"
+            data-description="Next-gen M4 architecture, 15.3-inch Retina, Ultra-thin design"
+            data-price="2289000"
+            data-image="Pictures/macbook-air-m4.png"
+            style="cursor: pointer" />
+          <h4>MacBook Air M4</h4>
+          <p>15-inch 2025 Model</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;2,289,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="apple-mac-air-m4"
+            data-name="Apple MacBook Air 15-inch (2025) - M4 Chip - 16GB RAM - 512GB"
+            data-price="2289000"
+            data-image="Pictures/macbook-air-m4.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/macbook-pro-m3-max.png"
+            class="product-link"
+            data-id="apple-mac-pro-16"
+            data-name="Apple MacBook Pro 16-inch - M3 Max - 36GB RAM - 1TB SSD"
+            data-description="High-end workstation for pros, 16-core CPU, 40-core GPU"
+            data-price="6999000"
+            data-image="Pictures/macbook-pro-m3-max.png"
+            style="cursor: pointer" />
+          <h4>MacBook Pro 16"</h4>
+          <p>M3 Max Powerhouse</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;6,999,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="apple-mac-pro-16"
+            data-name="Apple MacBook Pro 16-inch - M3 Max - 36GB RAM - 1TB SSD"
+            data-price="6999000"
+            data-image="Pictures/macbook-pro-m3-max.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- Row 2: Lenovo Laptops -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/lenovo-ideapad-1.png"
+            class="product-link"
+            data-id="lenovo-ideapad-1"
+            data-name="Lenovo IdeaPad 1 - Intel Celeron - 8GB RAM - 256GB SSD"
+            data-description="Lightweight everyday laptop, 15.6-inch HD display"
+            data-price="480000"
+            data-image="Pictures/lenovo-ideapad-1.png"
+            style="cursor: pointer" />
+          <h4>Lenovo IdeaPad 1</h4>
+          <p>Everyday Essential</p>
+          <div class="rating"><img src="stars/Stars-3.png" /></div>
+          <p>&#8358;480,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="lenovo-ideapad-1"
+            data-name="Lenovo IdeaPad 1 - Intel Celeron - 8GB RAM - 256GB SSD"
+            data-price="480000"
+            data-image="Pictures/lenovo-ideapad-1.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/lenovo-thinkbook-14.png"
+            class="product-link"
+            data-id="lenovo-thinkbook-14"
+            data-name="Lenovo ThinkBook 14 - Core i5 14th Gen - 8GB RAM - 512GB SSD"
+            data-description="Business class security, WUXGA Display, Win 11 Pro"
+            data-price="970500"
+            data-image="Pictures/lenovo-thinkbook-14.png"
+            style="cursor: pointer" />
+          <h4>Lenovo ThinkBook 14</h4>
+          <p>Business Ready i5</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;970,500</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="lenovo-thinkbook-14"
+            data-name="Lenovo ThinkBook 14 - Core i5 14th Gen - 8GB RAM - 512GB SSD"
+            data-price="970500"
+            data-image="Pictures/lenovo-thinkbook-14.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/lenovo-yoga-9.png"
+            class="product-link"
+            data-id="lenovo-yoga-9"
+            data-name="Lenovo Yoga 9 2-in-1 - Core Ultra 7 - 16GB RAM - 1TB SSD"
+            data-description="OLED Touchscreen, 360-degree hinge, premium aluminum chassis"
+            data-price="3200000"
+            data-image="Pictures/lenovo-yoga-9.png"
+            style="cursor: pointer" />
+          <h4>Lenovo Yoga 9</h4>
+          <p>2-in-1 Convertible</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;3,200,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="lenovo-yoga-9"
+            data-name="Lenovo Yoga 9 2-in-1 - Core Ultra 7 - 16GB RAM - 1TB SSD"
+            data-price="3200000"
+            data-image="Pictures/lenovo-yoga-9.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- Row 3: Acer Laptops -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/acer-aspire-5.png"
+            class="product-link"
+            data-id="acer-aspire-5"
+            data-name="Acer Aspire 5 - Ryzen 5 - 8GB RAM - 256GB SSD"
+            data-description="Solid student laptop, Radeon graphics, 15.6-inch FHD"
+            data-price="700000"
+            data-image="Pictures/acer-aspire-5.png"
+            style="cursor: pointer" />
+          <h4>Acer Aspire 5</h4>
+          <p>Student & SME Pick</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;700,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="acer-aspire-5"
+            data-name="Acer Aspire 5 - Ryzen 5 - 8GB RAM - 256GB SSD"
+            data-price="700000"
+            data-image="Pictures/acer-aspire-5.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/acer-nitro-v15.png"
+            class="product-link"
+            data-id="acer-nitro-v15"
+            data-name="Acer Nitro V15 - Core i5 13th Gen - 16GB RAM - RTX 2050"
+            data-description="Entry-level gaming, 512GB SSD, 144Hz Refresh Rate"
+            data-price="1470000"
+            data-image="Pictures/acer-nitro-v15.png"
+            style="cursor: pointer" />
+          <h4>Acer Nitro V15</h4>
+          <p>Gaming Laptop</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;1,470,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="acer-nitro-v15"
+            data-name="Acer Nitro V15 - Core i5 13th Gen - 16GB RAM - RTX 2050"
+            data-price="1470000"
+            data-image="Pictures/acer-nitro-v15.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/acer-predator-helios.png"
+            class="product-link"
+            data-id="acer-predator-16"
+            data-name="Acer Predator Helios Neo 16 - Core i9 - 16GB RAM - RTX 4070"
+            data-description="High-tier gaming, Liquid metal cooling, WQXGA IPS"
+            data-price="2809890"
+            data-image="Pictures/acer-predator-helios.png"
+            style="cursor: pointer" />
+          <h4>Predator Helios 16</h4>
+          <p>Pro Gaming Gear</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;2,809,890</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="acer-predator-16"
+            data-name="Acer Predator Helios Neo 16 - Core i9 - 16GB RAM - RTX 4070"
+            data-price="2809890"
+            data-image="Pictures/acer-predator-helios.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- Row 4: MSI Laptops -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/msi-cyborg-15.png"
+            class="product-link"
+            data-id="msi-cyborg-15"
+            data-name="MSI Cyborg 15 - Core i7 - 32GB RAM - RTX 4050"
+            data-description="Translucent design, 512GB SSD, 144Hz FHD"
+            data-price="1946000"
+            data-image="Pictures/msi-cyborg-15.png"
+            style="cursor: pointer" />
+          <h4>MSI Cyborg 15</h4>
+          <p>Cyberpunk Style</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;1,946,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="msi-cyborg-15"
+            data-name="MSI Cyborg 15 - Core i7 - 32GB RAM - RTX 4050"
+            data-price="1946000"
+            data-image="Pictures/msi-cyborg-15.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/msi-katana-15.png"
+            class="product-link"
+            data-id="msi-katana-15"
+            data-name="MSI Katana 15 HX - Core i7 14th Gen - 32GB RAM - RTX 5070"
+            data-description="Latest RTX 50 series graphics, 1TB SSD, 165Hz QHD"
+            data-price="2808000"
+            data-image="Pictures/msi-katana-15.png"
+            style="cursor: pointer" />
+          <h4>MSI Katana 15</h4>
+          <p>Next-Gen Gaming</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;2,808,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="msi-katana-15"
+            data-name="MSI Katana 15 HX - Core i7 14th Gen - 32GB RAM - RTX 5070"
+            data-price="2808000"
+            data-image="Pictures/msi-katana-15.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/msi-vector-16.png"
+            class="product-link"
+            data-id="msi-vector-16"
+            data-name="MSI Vector 16 HX - Core Ultra 9 - 16GB RAM - RTX 5070"
+            data-description="TGP optimized for performance, 1TB NVMe, QHD Display"
+            data-price="3780000"
+            data-image="Pictures/msi-vector-16.png"
+            style="cursor: pointer" />
+          <h4>MSI Vector 16</h4>
+          <p>Ultra 9 Workstation</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;3,780,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="msi-vector-16"
+            data-name="MSI Vector 16 HX - Core Ultra 9 - 16GB RAM - RTX 5070"
+            data-price="3780000"
+            data-image="Pictures/msi-vector-16.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/msi-titan-18.png"
+            class="product-link"
+            data-id="msi-titan-18"
+            data-name="MSI Titan 18 HX - Ultra 9 - 96GB RAM - 6TB SSD - RTX 5090"
+            data-description="The ultimate laptop, 24GB VRAM, Mechanical Keyboard"
+            data-price="10000000"
+            data-image="Pictures/msi-titan-18.png"
+            style="cursor: pointer" />
+          <h4>MSI Titan 18 HX</h4>
+          <p>The Dragon Edition</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;10,000,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="msi-titan-18"
+            data-name="MSI Titan 18 HX - Ultra 9 - 96GB RAM - 6TB SSD - RTX 5090"
+            data-price="10000000"
+            data-image="Pictures/msi-titan-18.png"
+            >Add to Cart</a
+          >
+        </div> -->
+        <!-- SET 1: APPLE MACBOOKS (2026 LINEUP) -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/macbook-neo.png"
+            class="product-link"
+            data-id="apple-mac-neo"
+            data-name="Apple MacBook Neo - A18 Pro Chip - 13-inch - 8GB RAM - 256GB SSD"
+            data-description="Ultra-efficient 2026 model, fanless design, 20-hour battery life"
+            data-price="1250000"
+            data-image="Pictures/macbook-neo.png"
+            style="cursor: pointer" />
+          <h4>MacBook Neo</h4>
+          <p>Value King 2026</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;1,250,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="apple-mac-neo"
+            data-name="Apple MacBook Neo - A18 Pro Chip - 13-inch - 8GB RAM - 256GB SSD"
+            data-price="1250000"
+            data-image="Pictures/macbook-neo.png"
+            >Add to Cart</a
+          >
+        </div> -->
+        <!-- 
+        <div class="col-4">
+          <img
+            src="Pictures/macbook-pro-m5.png"
+            class="product-link"
+            data-id="apple-mac-pro-m5"
+            data-name="Apple MacBook Pro 14 - M5 Chip - 24GB RAM - 1TB SSD"
+            data-description="Next-gen M5 Silicon, Liquid Retina XDR with ProMotion 120Hz"
+            data-price="3650000"
+            data-image="Pictures/macbook-pro-m5.png"
+            style="cursor: pointer" />
+          <h4>MacBook Pro M5</h4>
+          <p>Pro Power 14-inch</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;3,650,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="apple-mac-pro-m5"
+            data-name="Apple MacBook Pro 14 - M5 Chip - 24GB RAM - 1TB SSD"
+            data-price="3650000"
+            data-image="Pictures/macbook-pro-m5.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/macbook-air-m2-legacy.png"
+            class="product-link"
+            data-id="apple-mac-air-m2"
+            data-name="Apple MacBook Air - M2 Chip - 13.6-inch - 8GB RAM - 256GB SSD"
+            data-description="Classic Midnight finish, MagSafe 3, ultra-portable"
+            data-price="1550000"
+            data-image="Pictures/macbook-air-m2-legacy.png"
+            style="cursor: pointer" />
+          <h4>MacBook Air M2</h4>
+          <p>M2 Classic Edition</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;1,550,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="apple-mac-air-m2"
+            data-name="Apple MacBook Air - M2 Chip - 13.6-inch - 8GB RAM - 256GB SSD"
+            data-price="1550000"
+            data-image="Pictures/macbook-air-m2-legacy.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/macbook-pro-16-m5max.png"
+            class="product-link"
+            data-id="apple-mac-pro-m5max"
+            data-name="Apple MacBook Pro 16 - M5 Max - 64GB RAM - 2TB SSD"
+            data-description="Ultimate 2026 workstation, 16-core CPU, 40-core GPU"
+            data-price="7300000"
+            data-image="Pictures/macbook-pro-16-m5max.png"
+            style="cursor: pointer" />
+          <h4>MacBook Pro 16"</h4>
+          <p>M5 Max Flagship</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;7,300,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="apple-mac-pro-m5max"
+            data-name="Apple MacBook Pro 16 - M5 Max - 64GB RAM - 2TB SSD"
+            data-price="7300000"
+            data-image="Pictures/macbook-pro-16-m5max.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- SET 2: LENOVO HIGH-PERFORMANCE -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/lenovo-legion-7-rtx5080.png"
+            class="product-link"
+            data-id="lenovo-legion-7-5080"
+            data-name="Lenovo Legion 7 - Core Ultra 9 - 64GB RAM - RTX 5080"
+            data-description="AI-tuned gaming, 16-inch 240Hz G-Sync display, 1TB Gen5 SSD"
+            data-price="4600000"
+            data-image="Pictures/lenovo-legion-7-rtx5080.png"
+            style="cursor: pointer" />
+          <h4>Legion 7 Pro</h4>
+          <p>RTX 5080 Gaming</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;4,600,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="lenovo-legion-7-5080"
+            data-name="Lenovo Legion 7 - Core Ultra 9 - 64GB RAM - RTX 5080"
+            data-price="4600000"
+            data-image="Pictures/lenovo-legion-7-rtx5080.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/lenovo-loq-15.png"
+            class="product-link"
+            data-id="lenovo-loq-2026"
+            data-name="Lenovo LOQ 15 - Ryzen 7 - 16GB RAM - 512GB SSD"
+            data-description="Modern entry-gaming, 144Hz FHD, robust thermal design"
+            data-price="1850000"
+            data-image="Pictures/lenovo-loq-15.png"
+            style="cursor: pointer" />
+          <h4>Lenovo LOQ 15</h4>
+          <p>Best Value Gaming</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;1,850,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="lenovo-loq-2026"
+            data-name="Lenovo LOQ 15 - Ryzen 7 - 16GB RAM - 512GB SSD"
+            data-price="1850000"
+            data-image="Pictures/lenovo-loq-15.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/lenovo-thinkpad-x1.png"
+            class="product-link"
+            data-id="lenovo-x1-carbon-13"
+            data-name="Lenovo ThinkPad X1 Carbon Gen 13 - 32GB RAM - 1TB SSD"
+            data-description="Ultra-light business flagship, Carbon fiber weave, 4K OLED"
+            data-price="3200000"
+            data-image="Pictures/lenovo-thinkpad-x1.png"
+            style="cursor: pointer" />
+          <h4>ThinkPad X1 Carbon</h4>
+          <p>Executive Business</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;3,200,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="lenovo-x1-carbon-13"
+            data-name="Lenovo ThinkPad X1 Carbon Gen 13 - 32GB RAM - 1TB SSD"
+            data-price="3200000"
+            data-image="Pictures/lenovo-thinkpad-x1.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/lenovo-ideapad-slim-5.png"
+            class="product-link"
+            data-id="lenovo-slim-5"
+            data-name="Lenovo IdeaPad Slim 5 - Core i7 14th Gen - 16GB RAM - 1TB SSD"
+            data-description="Elegant aluminum body, FHD camera with privacy shutter"
+            data-price="1150000"
+            data-image="Pictures/lenovo-ideapad-slim-5.png"
+            style="cursor: pointer" />
+          <h4>IdeaPad Slim 5</h4>
+          <p>Premium Mid-range</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;1,150,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="lenovo-slim-5"
+            data-name="Lenovo IdeaPad Slim 5 - Core i7 14th Gen - 16GB RAM - 1TB SSD"
+            data-price="1150000"
+            data-image="Pictures/lenovo-ideapad-slim-5.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- SET 3: ACER PRODUCTIVITY & GAMING -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/acer-swift-go-14-ai.png"
+            class="product-link"
+            data-id="acer-swift-go-ai"
+            data-name="Acer Swift Go 14 AI - Core Ultra 7 - 16GB RAM - 512GB SSD"
+            data-description="Copilot+ PC, AI-enhanced webcam, 2.8K OLED 120Hz display"
+            data-price="1350000"
+            data-image="Pictures/acer-swift-go-14-ai.png"
+            style="cursor: pointer" />
+          <h4>Swift Go 14 AI</h4>
+          <p>Thin & Light AI PC</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;1,350,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="acer-swift-go-ai"
+            data-name="Acer Swift Go 14 AI - Core Ultra 7 - 16GB RAM - 512GB SSD"
+            data-price="1350000"
+            data-image="Pictures/acer-swift-go-14-ai.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/acer-aspire-lite.png"
+            class="product-link"
+            data-id="acer-aspire-lite-2026"
+            data-name="Acer Aspire Lite - Intel Core i5 - 12GB RAM - 512GB SSD"
+            data-description="Budget-friendly productivity, narrow bezel design, silver finish"
+            data-price="680000"
+            data-image="Pictures/acer-aspire-lite.png"
+            style="cursor: pointer" />
+          <h4>Acer Aspire Lite</h4>
+          <p>Daily Home & Office</p>
+          <div class="rating"><img src="stars/Stars-3.png" /></div>
+          <p>&#8358;680,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="acer-aspire-lite-2026"
+            data-name="Acer Aspire Lite - Intel Core i5 - 12GB RAM - 512GB SSD"
+            data-price="680000"
+            data-image="Pictures/acer-aspire-lite.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/acer-nitro-17.png"
+            class="product-link"
+            data-id="acer-nitro-17-rtx50"
+            data-name="Acer Nitro 17 - Core i7 - 16GB RAM - RTX 5060"
+            data-description="Large 17.3-inch gaming screen, RGB keyboard, dual-fan cooling"
+            data-price="2100000"
+            data-image="Pictures/acer-nitro-17.png"
+            style="cursor: pointer" />
+          <h4>Acer Nitro 17</h4>
+          <p>17" Immersive Gaming</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;2,100,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="acer-nitro-17-rtx50"
+            data-name="Acer Nitro 17 - Core i7 - 16GB RAM - RTX 5060"
+            data-price="2100000"
+            data-image="Pictures/acer-nitro-17.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/acer-predator-helios-neo-14.png"
+            class="product-link"
+            data-id="acer-predator-neo-14"
+            data-name="Acer Predator Helios Neo 14 - Core i9 - 32GB RAM - RTX 5070"
+            data-description="Compact powerhouse, 14.5-inch 165Hz display, Liquid Metal cooling"
+            data-price="3450000"
+            data-image="Pictures/acer-predator-helios-neo-14.png"
+            style="cursor: pointer" />
+          <h4>Predator Neo 14</h4>
+          <p>Portable Performance</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;3,450,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="acer-predator-neo-14"
+            data-name="Acer Predator Helios Neo 14 - Core i9 - 32GB RAM - RTX 5070"
+            data-price="3450000"
+            data-image="Pictures/acer-predator-helios-neo-14.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- SET 4: MSI EXTREME & CREATOR -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/msi-raider-ge78.png"
+            class="product-link"
+            data-id="msi-raider-18-rtx5090"
+            data-name="MSI Raider 18 HX - Core Ultra 9 - 64GB RAM - RTX 5090"
+            data-description="24GB VRAM, RGB Light bar, 4K Mini-LED 144Hz screen"
+            data-price="7450000"
+            data-image="Pictures/msi-raider-ge78.png"
+            style="cursor: pointer" />
+          <h4>MSI Raider 18 HX</h4>
+          <p>Elite Gaming King</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;7,450,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="msi-raider-18-rtx5090"
+            data-name="MSI Raider 18 HX - Core Ultra 9 - 64GB RAM - RTX 5090"
+            data-price="7450000"
+            data-image="Pictures/msi-raider-ge78.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/msi-summit-e13.png"
+            class="product-link"
+            data-id="msi-summit-e13"
+            data-name="MSI Summit E13 AI EVO - Core Ultra 7 - 16GB RAM - 1TB SSD"
+            data-description="Business 2-in-1, stylus included, enterprise-grade security"
+            data-price="1980500"
+            data-image="Pictures/msi-summit-e13.png"
+            style="cursor: pointer" />
+          <h4>MSI Summit E13</h4>
+          <p>AI Business Flip</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;1,980,500</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="msi-summit-e13"
+            data-name="MSI Summit E13 AI EVO - Core Ultra 7 - 16GB RAM - 1TB SSD"
+            data-price="1980500"
+            data-image="Pictures/msi-summit-e13.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/msi-cyborg-15-rtx5060.png"
+            class="product-link"
+            data-id="msi-cyborg-5060"
+            data-name="MSI Cyborg 15 - Core 7 240H - 16GB RAM - RTX 5060"
+            data-description="Transparent keys, slim profile, 144Hz high refresh display"
+            data-price="1880000"
+            data-image="Pictures/msi-cyborg-15-rtx5060.png"
+            style="cursor: pointer" />
+          <h4>MSI Cyborg 15</h4>
+          <p>RTX 50-Series Ready</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;1,880,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="msi-cyborg-5060"
+            data-name="MSI Cyborg 15 - Core 7 240H - 16GB RAM - RTX 5060"
+            data-price="1880000"
+            data-image="Pictures/msi-cyborg-15-rtx5060.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/msi-prestige-16.png"
+            class="product-link"
+            data-id="msi-prestige-16-ai"
+            data-name="MSI Prestige 16 AI - Core Ultra 9 - 32GB RAM - 2TB SSD"
+            data-description="Creator Edition, 4K OLED display, Wi-Fi 7, ultra-fast storage"
+            data-price="2950000"
+            data-image="Pictures/msi-prestige-16.png"
+            style="cursor: pointer" />
+          <h4>MSI Prestige 16 AI</h4>
+          <p>The Creator's Tool</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;2,950,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="msi-prestige-16-ai"
+            data-name="MSI Prestige 16 AI - Core Ultra 9 - 32GB RAM - 2TB SSD"
+            data-price="2950000"
+            data-image="Pictures/msi-prestige-16.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- SET 5: MIXED BRAND BESTSELLERS -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/macbook-air-m1-classic.png"
+            class="product-link"
+            data-id="apple-mac-air-m1-2026"
+            data-name="Apple MacBook Air (2020 Model) - M1 Chip - 8GB RAM - 256GB"
+            data-description="Value king legacy unit, reliable performance, 15-hour battery"
+            data-price="1100000"
+            data-image="Pictures/macbook-air-m1-classic.png"
+            style="cursor: pointer" />
+          <h4>MacBook Air M1</h4>
+          <p>Entry-Level Choice</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;1,100,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="apple-mac-air-m1-2026"
+            data-name="Apple MacBook Air (2020 Model) - M1 Chip - 8GB RAM - 256GB"
+            data-price="1100000"
+            data-image="Pictures/macbook-air-m1-classic.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/lenovo-yoga-7i-2in1.png"
+            class="product-link"
+            data-id="lenovo-yoga-7i-2026"
+            data-name="Lenovo Yoga 7i 2-in-1 - Core Ultra 5 - 16GB RAM - 512GB SSD"
+            data-description="360-degree flip design, PureSight 2.5K display, active pen support"
+            data-price="1650000"
+            data-image="Pictures/lenovo-yoga-7i-2in1.png"
+            style="cursor: pointer" />
+          <h4>Lenovo Yoga 7i</h4>
+          <p>Premium 2-in-1</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;1,650,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="lenovo-yoga-7i-2026"
+            data-name="Lenovo Yoga 7i 2-in-1 - Core Ultra 5 - 16GB RAM - 512GB SSD"
+            data-price="1650000"
+            data-image="Pictures/lenovo-yoga-7i-2in1.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/acer-nitro-v-15-rtx40.png"
+            class="product-link"
+            data-id="acer-nitro-v15-classic"
+            data-name="Acer Nitro V 15 - Core i5 - 16GB RAM - RTX 4050"
+            data-description="Reliable budget gaming, dual cooling fans, DTS X: Ultra audio"
+            data-price="1250000"
+            data-image="Pictures/acer-nitro-v-15-rtx40.png"
+            style="cursor: pointer" />
+          <h4>Nitro V 15</h4>
+          <p>Budget Gaming Champ</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;1,250,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="acer-nitro-v15-classic"
+            data-name="Acer Nitro V 15 - Core i5 - 16GB RAM - RTX 4050"
+            data-price="1250000"
+            data-image="Pictures/acer-nitro-v-15-rtx40.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/msi-katana-15-rtx5070.png"
+            class="product-link"
+            data-id="msi-katana-5070"
+            data-name="MSI Katana 15 - Core i7 14th Gen - 32GB RAM - RTX 5070"
+            data-description="High-tier specs, 1TB NVMe, QHD 165Hz display, 4-Zone RGB"
+            data-price="2808000"
+            data-image="Pictures/msi-katana-15-rtx5070.png"
+            style="cursor: pointer" />
+          <h4>MSI Katana 15</h4>
+          <p>Competitive Gaming</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;2,808,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="msi-katana-5070"
+            data-name="MSI Katana 15 - Core i7 14th Gen - 32GB RAM - RTX 5070"
+            data-price="2808000"
+            data-image="Pictures/msi-katana-15-rtx5070.png"
+            >Add to Cart</a
+          >
+        </div> -->
+      </div>
+
+      <!-- Games, Speakers & Networking Devices-->
+      <h2 class="title">Games, Speakers & Networking Devices</h2>
+      <div class="row">
+        <div class="col-4">
+          <img
+            src="Pictures/p21.png"
+            class="product-link"
+            data-id="sony-ps5-digital"
+            data-name="Sony PlayStation 5 Digital Edition"
+            data-price="890000"
+            data-image="Pictures/p21.png"
+            style="cursor: pointer" />
+          <h4>PlayStation 5 (PS5)</h4>
+          <p>Digital Edition - 825GB SSD</p>
+          <div class="rating">
+            <img src="stars/Stars-4.png" />
+          </div>
+          <p>&#8358;890,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="sony-ps5-digital"
+            data-name="Sony PlayStation 5 Digital Edition"
+            data-price="890000"
+            data-image="Pictures/p21.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p22.png"
+            class="product-link"
+            data-id="Starlink-standard-gen3"
+            data-name="Starlink Standard Kit - Gen 3 - White"
+            data-price="590000"
+            data-image="Pictures/p22.png"
+            style="cursor: pointer" />
+          <h4>Starlink Standard Kit</h4>
+          <p>High-Speed Satellite Internet</p>
+          <div class="rating">
+            <img src="stars/Stars-4.png" />
+          </div>
+          <p>&#8358;590,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Starlink-standard-gen3"
+            data-name="Starlink Standard Kit - Gen 3 - White"
+            data-price="590000"
+            data-image="Pictures/p22.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p23.png"
+            class="product-link"
+            data-id="Harman-kardon-onyx-9"
+            data-name="Harman Kardon ONYX STUDIO 9 Bluetooth Speaker"
+            data-price="415000"
+            data-image="Pictures/p23.png"
+            style="cursor: pointer" />
+          <h4>Harman Kardon Onyx 9</h4>
+          <p>Portable Stereo Speaker</p>
+          <div class="rating">
+            <img src="stars/Stars-4.png" />
+          </div>
+          <p>&#8358;415,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Harman-kardon-onyx-9"
+            data-name="Harman Kardon ONYX STUDIO 9 Bluetooth Speaker"
+            data-price="415000"
+            data-image="Pictures/p23.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p24.png"
+            class="product-link"
+            data-id="MTN-5g-router-cat4"
+            data-name="MTN Broadband 5G/CAT4 Router + 50GB Data"
+            data-price="80000"
+            data-image="Pictures/p24.png"
+            style="cursor: pointer" />
+          <h4>MTN Broadband Router</h4>
+          <p>5G/4G LTE High Speed</p>
+          <div class="rating">
+            <img src="stars/Stars-4.png" />
+          </div>
+          <p>&#8358;80,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="MTN-5g-router-cat4"
+            data-name="MTN Broadband 5G/CAT4 Router + 50GB Data"
+            data-price="280000"
+            data-image="Pictures/p24.png"
+            >Add to Cart</a
+          >
+        </div>
+        <!-- more -->
+        <!-- 1. Starlink Standard Kit -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/starlink-gen3.png"
+            class="product-link"
+            data-id="starlink-standard"
+            data-name="Starlink Standard Kit (Gen 3) - High-Speed Satellite Internet"
+            data-description="Includes Starlink Dish, Router, Base, and Cables. High-speed, low-latency internet for remote areas."
+            data-price="800000"
+            data-image="Pictures/starlink-gen3.png"
+            style="cursor: pointer" />
+          <h4>Starlink Standard</h4>
+          <p>Satellite Internet Kit</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;800,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="starlink-standard"
+            data-name="Starlink Standard Kit (Gen 3) - High-Speed Satellite Internet"
+            data-price="800000"
+            data-image="Pictures/starlink-gen3.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- 2. MTN 5G Router -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/mtn-5g-router.png"
+            class="product-link"
+            data-id="mtn-5g-router"
+            data-name="MTN 5G Broadband Router - Ultra-Fast Wireless Internet"
+            data-description="Includes 100GB bonus data on activation, connects up to 32 devices simultaneously."
+            data-price="80000"
+            data-image="Pictures/mtn-5g-router.png"
+            style="cursor: pointer" />
+          <h4>MTN 5G Router</h4>
+          <p>Ultra-Fast Broadband</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;80,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="mtn-5g-router"
+            data-name="MTN 5G Broadband Router - Ultra-Fast Wireless Internet"
+            data-price="80000"
+            data-image="Pictures/mtn-5g-router.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- 3. Airtel 5G Smart Box -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/airtel-5g-router.png"
+            class="product-link"
+            data-id="airtel-5g-box"
+            data-name="Airtel 5G Smart Box Router - High Speed Connectivity"
+            data-description="Unlimited data for the first month, 5G/4G dual-mode support with internal UPS."
+            data-price="85500"
+            data-image="Pictures/airtel-5g-router.png"
+            style="cursor: pointer" />
+          <h4>Airtel 5G Box</h4>
+          <p>Smart WiFi & Router</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;85,500</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="airtel-5g-box"
+            data-name="Airtel 5G Smart Box Router - High Speed Connectivity"
+            data-price="85500"
+            data-image="Pictures/airtel-5g-router.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- 4. Glo 4G LTE MiFi -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/glo-mifi.png"
+            class="product-link"
+            data-id="glo-mifi-4g"
+            data-name="Glo 4G LTE Pocket MiFi - Portable Wireless Hotspot"
+            data-description="Comes with 30GB free data, supports up to 10 devices, long-lasting battery."
+            data-price="25000"
+            data-image="Pictures/glo-mifi.png"
+            style="cursor: pointer" />
+          <h4>Glo 4G MiFi</h4>
+          <p>Portable WiFi Hotspot</p>
+          <div class="rating"><img src="stars/Stars-3.png" /></div>
+          <p>&#8358;25,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="glo-mifi-4g"
+            data-name="Glo 4G LTE Pocket MiFi - Portable Wireless Hotspot"
+            data-price="25000"
+            data-image="Pictures/glo-mifi.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- 5. 9mobile 4G Router -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/9mobile-router.png"
+            class="product-link"
+            data-id="9mobile-4g-router"
+            data-name="9mobile 4G LTE Universal Router - High Speed Internet"
+            data-description="Reliable 4G connection, external antenna ports for better signal reception."
+            data-price="65000"
+            data-image="Pictures/9mobile-router.png"
+            style="cursor: pointer" />
+          <h4>9mobile 4G Router</h4>
+          <p>Internet Connection</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;65,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="9mobile-4g-router"
+            data-name="9mobile 4G LTE Universal Router - High Speed Internet"
+            data-price="65000"
+            data-image="Pictures/9mobile-router.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- 6. JBL Boombox 3 -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/jbl-boombox3.png"
+            class="product-link"
+            data-id="jbl-boombox-3"
+            data-name="JBL Boombox 3 - Portable Bluetooth Speaker"
+            data-description="Massive sound and deepest bass, IP67 dust and waterproof, 24 hours of play time."
+            data-price="900000"
+            data-image="Pictures/jbl-boombox3.png"
+            style="cursor: pointer" />
+          <h4>JBL Boombox 3</h4>
+          <p>Wireless Party Sound</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;900,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="jbl-boombox-3"
+            data-name="JBL Boombox 3 - Portable Bluetooth Speaker"
+            data-price="900000"
+            data-image="Pictures/jbl-boombox3.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- 7. Harman Kardon Aura Studio 5 -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/harman-aura5.png"
+            class="product-link"
+            data-id="harman-aura-5"
+            data-name="Harman Kardon Aura Studio 5 - Bluetooth Speaker"
+            data-description="Iconic 360-degree ambient light, premium glass dome design, 2026 Model."
+            data-price="595000"
+            data-image="Pictures/harman-aura5.png"
+            style="cursor: pointer" />
+          <h4>Aura Studio 5</h4>
+          <p>Harman Kardon Premium</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;595,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="harman-aura-5"
+            data-name="Harman Kardon Aura Studio 5 - Bluetooth Speaker"
+            data-price="595000"
+            data-image="Pictures/harman-aura5.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- 8. Samsung Q-Series Soundbar -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/samsung-soundbar.png"
+            class="product-link"
+            data-id="samsung-q990"
+            data-name="Samsung Q-Series Soundbar - Wireless Dolby Atmos"
+            data-description="11.1.4 Channel sound, wireless subwoofer included, Q-Symphony technology."
+            data-price="1200000"
+            data-image="Pictures/samsung-soundbar.png"
+            style="cursor: pointer" />
+          <h4>Samsung Soundbar</h4>
+          <p>Home Theater Audio</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;1,200,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="samsung-q990"
+            data-name="Samsung Q-Series Soundbar - Wireless Dolby Atmos"
+            data-price="1200000"
+            data-image="Pictures/samsung-soundbar.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- 9. LG XBOOM CL98 -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/lg-xboom-cl98.png"
+            class="product-link"
+            data-id="lg-xboom-cl98"
+            data-name="LG XBOOM 3500W HiFi System - Home Theater"
+            data-description="3500 Watts powerful output, Bluetooth connectivity, Multi-Color Lighting."
+            data-price="1130500"
+            data-image="Pictures/lg-xboom-cl98.png"
+            style="cursor: pointer" />
+          <h4>LG XBOOM CL98</h4>
+          <p>High Power HiFi System</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;1,130,500</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="lg-xboom-cl98"
+            data-name="LG XBOOM 3500W HiFi System - Home Theater"
+            data-price="1130500"
+            data-image="Pictures/lg-xboom-cl98.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- 10. Oraimo SpaceBox Max -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/oraimo-spacebox.png"
+            class="product-link"
+            data-id="oraimo-spacebox"
+            data-name="Oraimo SpaceBox Max - 200W Wireless Party Speaker"
+            data-description="High-fidelity 200W sound, RGB light show, built-in handle for portability."
+            data-price="402000"
+            data-image="Pictures/oraimo-spacebox.png"
+            style="cursor: pointer" />
+          <h4>Oraimo SpaceBox</h4>
+          <p>Party Wireless Speaker</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;402,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="oraimo-spacebox"
+            data-name="Oraimo SpaceBox Max - 200W Wireless Party Speaker"
+            data-price="402000"
+            data-image="Pictures/oraimo-spacebox.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- 11. Zealot S87 -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/zealot-s87.png"
+            class="product-link"
+            data-id="zealot-s87-speaker"
+            data-name="Zealot S87 High Power Bluetooth Speaker"
+            data-description="80W output, 16000mAh battery for extended play, waterproof outdoor design."
+            data-price="85000"
+            data-image="Pictures/zealot-s87.png"
+            style="cursor: pointer" />
+          <h4>Zealot S87</h4>
+          <p>Outdoor High Bass</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;85,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="zealot-s87-speaker"
+            data-name="Zealot S87 High Power Bluetooth Speaker"
+            data-price="85000"
+            data-image="Pictures/zealot-s87.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- 12. Bose SoundLink Max -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/bose-soundlink-max.png"
+            class="product-link"
+            data-id="bose-sl-max"
+            data-name="Bose SoundLink Max - Portable Wireless Party Speaker"
+            data-description="Premium Bose sound, IP67 waterproof, 20 hours of battery life, USB-C."
+            data-price="738000"
+            data-image="Pictures/bose-soundlink-max.png"
+            style="cursor: pointer" />
+          <h4>Bose SoundLink Max</h4>
+          <p>High Fidelity Portable</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;738,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="bose-sl-max"
+            data-name="Bose SoundLink Max - Portable Wireless Party Speaker"
+            data-price="738000"
+            data-image="Pictures/bose-soundlink-max.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- 13. Bang & Olufsen Beosound Explore -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/bo-explore.png"
+            class="product-link"
+            data-id="bo-beosound-explore"
+            data-name="Bang & Olufsen Beosound Explore - Outdoor Speaker"
+            data-description="Ultra-durable, waterproof and dustproof, true 360-degree sound."
+            data-price="582000"
+            data-image="Pictures/bo-explore.png"
+            style="cursor: pointer" />
+          <h4>Beosound Explore</h4>
+          <p>B&O Luxury Audio</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;582,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="bo-beosound-explore"
+            data-name="Bang & Olufsen Beosound Explore - Outdoor Speaker"
+            data-price="582000"
+            data-image="Pictures/bo-explore.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- 14. VAIB Audio Tower -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/vaib-speaker.png"
+            class="product-link"
+            data-id="vaib-v100"
+            data-name="VAIB V100 Audio Tower - Dual Woofer System"
+            data-description="Karaoke-ready tower speaker with wireless mic and high-density wood chassis."
+            data-price="145000"
+            data-image="Pictures/vaib-speaker.png"
+            style="cursor: pointer" />
+          <h4>VAIB Audio Tower</h4>
+          <p>Vertical Sound System</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;145,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="vaib-v100"
+            data-name="VAIB V100 Audio Tower - Dual Woofer System"
+            data-price="145000"
+            data-image="Pictures/vaib-speaker.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- 15. Syms High Precision Speaker -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/syms-speaker.png"
+            class="product-link"
+            data-id="syms-precision"
+            data-name="Syms High Precision Bluetooth Home Speaker"
+            data-description="Enhanced clarity and frequency response for audiophiles, sleek minimalist design."
+            data-price="95000"
+            data-image="Pictures/syms-speaker.png"
+            style="cursor: pointer" />
+          <h4>Syms Precision</h4>
+          <p>Home Audio Excellence</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;95,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="syms-precision"
+            data-name="Syms High Precision Bluetooth Home Speaker"
+            data-price="95000"
+            data-image="Pictures/syms-speaker.png"
+            >Add to Cart</a
+          >
+        </div> -->
+        <!-- ROW 4: NETWORKING & SMART HOME -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/tp-link-deco.png"
+            class="product-link"
+            data-id="tplink-deco-x50"
+            data-name="TP-Link Deco X50 Mesh WiFi 6 System"
+            data-description="Seamless AI-Driven Mesh, covers up to 6,500 sq. ft, eliminates dead zones."
+            data-price="320000"
+            data-image="Pictures/tp-link-deco.png"
+            style="cursor: pointer" />
+          <h4>TP-Link Deco X50</h4>
+          <p>Whole Home Mesh WiFi</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;320,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="tplink-deco-x50"
+            data-name="TP-Link Deco X50 Mesh WiFi 6 System"
+            data-price="320000"
+            data-image="Pictures/tp-link-deco.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/huawei-b535.png"
+            class="product-link"
+            data-id="huawei-b535"
+            data-name="Huawei B535 4G LTE Pro Router"
+            data-description="Dual-band WiFi, 300Mbps download speeds, supports all Nigerian networks."
+            data-price="95000"
+            data-image="Pictures/huawei-b535.png"
+            style="cursor: pointer" />
+          <h4>Huawei B535 Pro</h4>
+          <p>Universal 4G Router</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;95,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="huawei-b535"
+            data-name="Huawei B535 4G LTE Pro Router"
+            data-price="95000"
+            data-image="Pictures/huawei-b535.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/netgear-nighthawk.png"
+            class="product-link"
+            data-id="netgear-m6"
+            data-name="Netgear Nighthawk M6 5G Mobile Hotspot"
+            data-description="WiFi 6 speeds up to 3.6Gbps, secure private connection on the go, 13-hour battery."
+            data-price="550000"
+            data-image="Pictures/netgear-nighthawk.png"
+            style="cursor: pointer" />
+          <h4>Nighthawk M6 5G</h4>
+          <p>Premium Mobile WiFi</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;550,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="netgear-m6"
+            data-name="Netgear Nighthawk M6 5G Mobile Hotspot"
+            data-price="550000"
+            data-image="Pictures/netgear-nighthawk.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/mercusys-halo.png"
+            class="product-link"
+            data-id="mercusys-h80"
+            data-name="Mercusys Halo H80X Mesh WiFi 6"
+            data-description="Dual-band speeds up to 3000 Mbps, connects 150 devices, easy app management."
+            data-price="185000"
+            data-image="Pictures/mercusys-halo.png"
+            style="cursor: pointer" />
+          <h4>Mercusys Halo H80X</h4>
+          <p>Budget Mesh System</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;185,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="mercusys-h80"
+            data-name="Mercusys Halo H80X Mesh WiFi 6"
+            data-price="185000"
+            data-image="Pictures/mercusys-halo.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/zte-mc801a.png"
+            class="product-link"
+            data-id="zte-5g-indoor"
+            data-name="ZTE MC801A 5G Indoor WiFi 6 Router"
+            data-description="High gain antenna, low power consumption, optimized for gaming and streaming."
+            data-price="110000"
+            data-image="Pictures/zte-mc801a.png"
+            style="cursor: pointer" />
+          <h4>ZTE 5G Indoor</h4>
+          <p>5G High Speed WiFi</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;110,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="zte-mc801a"
+            data-name="ZTE MC801A 5G Indoor WiFi 6 Router"
+            data-price="110000"
+            data-image="Pictures/zte-mc801a.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- ROW 5: JBL & PREMIUM PORTABLES -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/jbl-partybox-710.png"
+            class="product-link"
+            data-id="jbl-partybox-710"
+            data-name="JBL PartyBox 710 - 800W Party Speaker"
+            data-description="800W RMS powerful sound, built-in light show, guitar and mic inputs."
+            data-price="1350000"
+            data-image="Pictures/jbl-partybox-710.png"
+            style="cursor: pointer" />
+          <h4>JBL PartyBox 710</h4>
+          <p>Ultimate Party Sound</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;1,350,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="jbl-partybox-710"
+            data-name="JBL PartyBox 710 - 800W Party Speaker"
+            data-price="1350000"
+            data-image="Pictures/jbl-partybox-710.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/jbl-flip-7.png"
+            class="product-link"
+            data-id="jbl-flip-7"
+            data-name="JBL Flip 7 Waterproof Speaker"
+            data-description="Next-gen 2-way speaker system, IP67 waterproof, 15 hours of playtime."
+            data-price="210000"
+            data-image="Pictures/jbl-flip-7.png"
+            style="cursor: pointer" />
+          <h4>JBL Flip 7</h4>
+          <p>Portable Waterproof</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;210,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="jbl-flip-7"
+            data-name="JBL Flip 7 Waterproof Speaker"
+            data-price="210000"
+            data-image="Pictures/jbl-flip-7.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/sony-srs-xg300.png"
+            class="product-link"
+            data-id="sony-xg300"
+            data-name="Sony SRS-XG300 Wireless Party Speaker"
+            data-description="Retractable handle, Mega Bass, ambient illumination, 25-hour battery."
+            data-price="450000"
+            data-image="Pictures/sony-srs-xg300.png"
+            style="cursor: pointer" />
+          <h4>Sony XG300</h4>
+          <p>Wireless Party Speaker</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;450,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="sony-xg300"
+            data-name="Sony SRS-XG300 Wireless Party Speaker"
+            data-price="450000"
+            data-image="Pictures/sony-srs-xg300.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/jbl-extreme-4.png"
+            class="product-link"
+            data-id="jbl-extreme-4"
+            data-name="JBL Xtreme 4 Portable Bluetooth Speaker"
+            data-description="AI Sound Boost, replaceable battery, multi-speaker connection via Auracast."
+            data-price="580000"
+            data-image="Pictures/jbl-extreme-4.png"
+            style="cursor: pointer" />
+          <h4>JBL Xtreme 4</h4>
+          <p>Powerful Portable Audio</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;580,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="jbl-extreme-4"
+            data-name="JBL Xtreme 4 Portable Bluetooth Speaker"
+            data-price="580000"
+            data-image="Pictures/jbl-extreme-4.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/marshall-stanmore.png"
+            class="product-link"
+            data-id="marshall-stanmore-3"
+            data-name="Marshall Stanmore III Bluetooth Speaker"
+            data-description="Iconic rock 'n' roll design, immersive home audio, eco-friendly build."
+            data-price="620000"
+            data-image="Pictures/marshall-stanmore.png"
+            style="cursor: pointer" />
+          <h4>Marshall Stanmore III</h4>
+          <p>Vintage Home Audio</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;620,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="marshall-stanmore-3"
+            data-name="Marshall Stanmore III Bluetooth Speaker"
+            data-price="620000"
+            data-image="Pictures/marshall-stanmore.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- ROW 6: SAMSUNG & LG HOME AUDIO -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/samsung-mx-st90.png"
+            class="product-link"
+            data-id="samsung-st90b"
+            data-name="Samsung Sound Tower ST90B - 1700W High Power"
+            data-description="Bi-directional sound, water-resistant top-panel, Karaoke mode with 2 mic inputs."
+            data-price="980000"
+            data-image="Pictures/samsung-mx-st90.png"
+            style="cursor: pointer" />
+          <h4>Samsung ST90B</h4>
+          <p>High Power Sound Tower</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;980,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="samsung-st90b"
+            data-name="Samsung Sound Tower ST90B - 1700W High Power"
+            data-price="980000"
+            data-image="Pictures/samsung-mx-st90.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/lg-s95qr.png"
+            class="product-link"
+            data-id="lg-s95qr"
+            data-name="LG S95QR 9.1.4 Channel Soundbar System"
+            data-description="810W total power, Triple Up-firing Channels, IMAX Enhanced, Dolby Atmos."
+            data-price="1450000"
+            data-image="Pictures/lg-s95qr.png"
+            style="cursor: pointer" />
+          <h4>LG S95QR Soundbar</h4>
+          <p>Premium Home Cinema</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;1,450,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="lg-s95qr"
+            data-name="LG S95QR 9.1.4 Channel Soundbar System"
+            data-price="1450000"
+            data-image="Pictures/lg-s95qr.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/samsung-frame-speaker.png"
+            class="product-link"
+            data-id="samsung-music-frame"
+            data-name="Samsung Music Frame Wireless Speaker"
+            data-description="Design that looks like a picture frame, 3nd gen Dolby Atmos, customizable panel."
+            data-price="650000"
+            data-image="Pictures/samsung-frame-speaker.png"
+            style="cursor: pointer" />
+          <h4>Samsung Music Frame</h4>
+          <p>Artistic Wireless Sound</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;650,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="samsung-music-frame"
+            data-name="Samsung Music Frame Wireless Speaker"
+            data-price="650000"
+            data-image="Pictures/samsung-frame-speaker.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/lg-xboom-go.png"
+            class="product-link"
+            data-id="lg-xboom-x03"
+            data-name="LG XBOOM Go XO3 Premium Speaker"
+            data-description="Omnidirectional 360 sound, glass-blown aesthetic, mood lighting presets."
+            data-price="310000"
+            data-image="Pictures/lg-xboom-go.png"
+            style="cursor: pointer" />
+          <h4>LG XBOOM Go XO3</h4>
+          <p>Premium Ambient Audio</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;310,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="lg-xboom-x03"
+            data-name="LG XBOOM Go XO3 Premium Speaker"
+            data-price="310000"
+            data-image="Pictures/lg-xboom-go.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/samsung-hw-b650.png"
+            class="product-link"
+            data-id="samsung-b650"
+            data-name="Samsung HW-B650 3.1ch Soundbar"
+            data-description="Dedicated center channel for clear dialogue, DTS Virtual:X, Bass Boost."
+            data-price="380000"
+            data-image="Pictures/samsung-hw-b650.png"
+            style="cursor: pointer" />
+          <h4>Samsung HW-B650</h4>
+          <p>Crystal Clear Dialogue</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;380,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="samsung-b650"
+            data-name="Samsung HW-B650 3.1ch Soundbar"
+            data-price="380000"
+            data-image="Pictures/samsung-hw-b650.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- ROW 7: ORAIMO, ZEALOT & VAIB BUDGET GEMS -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/oraimo-tilt.png"
+            class="product-link"
+            data-id="oraimo-tilt-sb"
+            data-name="Oraimo Tilt Soundbar - 16W Dual Driver"
+            data-description="45-degree tilt for sound projection, 12-hour playtime, versatile connectivity."
+            data-price="55000"
+            data-image="Pictures/oraimo-tilt.png"
+            style="cursor: pointer" />
+          <h4>Oraimo Tilt</h4>
+          <p>Compact Soundbar</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;55,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="oraimo-tilt-sb"
+            data-name="Oraimo Tilt Soundbar - 16W Dual Driver"
+            data-price="55000"
+            data-image="Pictures/oraimo-tilt.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/zealot-s67.png"
+            class="product-link"
+            data-id="zealot-s67"
+            data-name="Zealot S67 Wireless 60W Bluetooth Speaker"
+            data-description="Three speakers system with deep bass, power bank function, 14,400mAh battery."
+            data-price="78000"
+            data-image="Pictures/zealot-s67.png"
+            style="cursor: pointer" />
+          <h4>Zealot S67 Pro</h4>
+          <p>Super Bass Portable</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;78,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="zealot-s67"
+            data-name="Zealot S67 Wireless 60W Bluetooth Speaker"
+            data-price="78000"
+            data-image="Pictures/zealot-s67.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/vaib-pulse.png"
+            class="product-link"
+            data-id="vaib-pulse-8"
+            data-name="VAIB Pulse 8 RGB Party Speaker"
+            data-description="Syncing LED pulse lights, TWS pairing support, 10-hour battery life."
+            data-price="120000"
+            data-image="Pictures/vaib-pulse.png"
+            style="cursor: pointer" />
+          <h4>VAIB Pulse 8</h4>
+          <p>RGB Party Speaker</p>
+          <div class="rating"><img src="stars/Stars-3.png" /></div>
+          <p>&#8358;120,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="vaib-pulse-8"
+            data-name="VAIB Pulse 8 RGB Party Speaker"
+            data-price="120000"
+            data-image="Pictures/vaib-pulse.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/oraimo-wrap.png"
+            class="product-link"
+            data-id="oraimo-wrap"
+            data-name="Oraimo Wrap - Rugged Bluetooth Speaker"
+            data-description="Velcro strap for easy carry, IP67 dust/waterproof, 10W enhanced bass."
+            data-price="42000"
+            data-image="Pictures/oraimo-wrap.png"
+            style="cursor: pointer" />
+          <h4>Oraimo Wrap</h4>
+          <p>Adventure Ready Sound</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;42,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="oraimo-wrap"
+            data-name="Oraimo Wrap - Rugged Bluetooth Speaker"
+            data-price="42000"
+            data-image="Pictures/oraimo-wrap.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/zealot-s78.png"
+            class="product-link"
+            data-id="zealot-s78"
+            data-name="Zealot S78 High Volume 100W Speaker"
+            data-description="Massive 100W output, dual subwoofers, supports TF Card and Aux."
+            data-price="115000"
+            data-image="Pictures/zealot-s78.png"
+            style="cursor: pointer" />
+          <h4>Zealot S78 Pro</h4>
+          <p>Extreme Volume Outdoor</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;115,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="zealot-s78"
+            data-name="Zealot S78 High Volume 100W Speaker"
+            data-price="115000"
+            data-image="Pictures/zealot-s78.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- ROW 8: BOSE & HIGH-END AUDIO -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/bose-ultra-soundbar.png"
+            class="product-link"
+            data-id="bose-ultra-sb"
+            data-name="Bose Smart Ultra Soundbar"
+            data-description="AI Dialogue Mode, Dolby Atmos with upward-firing transducers, Alexa built-in."
+            data-price="1650000"
+            data-image="Pictures/bose-ultra-soundbar.png"
+            style="cursor: pointer" />
+          <h4>Bose Smart Ultra</h4>
+          <p>Elite Smart Audio</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;1,650,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="bose-ultra-sb"
+            data-name="Bose Smart Ultra Soundbar"
+            data-price="1650000"
+            data-image="Pictures/bose-ultra-soundbar.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/bo-beoplay-a9.png"
+            class="product-link"
+            data-id="bo-beoplay-a9"
+            data-name="Bang & Olufsen Beoplay A9 (5th Gen)"
+            data-description="One-point music system, 480-watt powerful room-filling sound, luxury design."
+            data-price="4200000"
+            data-image="Pictures/bo-beoplay-a9.png"
+            style="cursor: pointer" />
+          <h4>Beoplay A9</h4>
+          <p>Luxury Icon Speaker</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;4,200,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="bo-beoplay-a9"
+            data-name="Bang & Olufsen Beoplay A9 (5th Gen)"
+            data-price="4200000"
+            data-image="Pictures/bo-beoplay-a9.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/bose-s1-pro.png"
+            class="product-link"
+            data-id="bose-s1-plus"
+            data-name="Bose S1 Pro+ Wireless PA System"
+            data-description="All-in-one PA, floor monitor, and practice amplifier with OLED displays."
+            data-price="950000"
+            data-image="Pictures/bose-s1-pro.png"
+            style="cursor: pointer" />
+          <h4>Bose S1 Pro+</h4>
+          <p>Professional Portable PA</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;950,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="bose-s1-plus"
+            data-name="Bose S1 Pro+ Wireless PA System"
+            data-price="950000"
+            data-image="Pictures/bose-s1-pro.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/sonos-era-300.png"
+            class="product-link"
+            data-id="sonos-era-300"
+            data-name="Sonos Era 300 Smart Speaker"
+            data-description="Spatial audio with Dolby Atmos, Trueplay tuning, WiFi and Bluetooth support."
+            data-price="780000"
+            data-image="Pictures/sonos-era-300.png"
+            style="cursor: pointer" />
+          <h4>Sonos Era 300</h4>
+          <p>Spatial Audio Master</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;780,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="sonos-era-300"
+            data-name="Sonos Era 300 Smart Speaker"
+            data-price="780000"
+            data-image="Pictures/sonos-era-300.png"
+            >Add to Cart</a
+          >
+        </div> -->
+
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/harman-go-play.png"
+            class="product-link"
+            data-id="harman-go-3"
+            data-name="Harman Kardon Go + Play 3"
+            data-description="Three-way speaker design, automatic self-tuning, dual microphones for calls."
+            data-price="550000"
+            data-image="Pictures/harman-go-play.png"
+            style="cursor: pointer" />
+          <h4>Go + Play 3</h4>
+          <p>Sophisticated Portable</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;550,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="harman-go-3"
+            data-name="Harman Kardon Go + Play 3"
+            data-price="550000"
+            data-image="Pictures/harman-go-play.png"
+            >Add to Cart</a
+          >
+        </div> -->
+        <!-- more -->
+        <!-- ROW 9: ADVANCED CONNECTIVITY & HYBRID AUDIO -->
+        <!-- <div class="col-4">
+          <img
+            src="Pictures/starlink-mini.png"
+            class="product-link"
+            data-id="starlink-mini"
+            data-name="Starlink Mini - Portable Satellite Internet Kit"
+            data-description="Ultra-portable design, low power consumption, perfect for travelers and digital nomads."
+            data-price="650000"
+            data-image="Pictures/starlink-mini.png"
+            style="cursor: pointer" />
+          <h4>Starlink Mini</h4>
+          <p>Compact Satellite Kit</p>
+          <div class="rating"><img src="stars/Stars-5.png" /></div>
+          <p>&#8358;650,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="starlink-mini"
+            data-name="Starlink Mini - Portable Satellite Internet Kit"
+            data-price="650000"
+            data-image="Pictures/starlink-mini.png"
+            >Add to Cart</a
+          >
+        </div> -->
+      </div>
+    </div>
+
+    <!-- pagination -->
+    <!-- <div class="pagination">
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <span class="dots">…</span>
+      <a href="#">3,943</a>
+      <a href="#" class="next">Next »</a>
+    </div> -->
+    <!-- Offer -->
+    <div class="offer">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-2">
+            <img src="images/exclusive.png" class="offer-img" />
+          </div>
+          <div class="col-2">
+            <p>Exclusively Available on JLK Empire</p>
+            <h1>Smart Band 4</h1>
+            <small
+              >This Mi Smart Band 4 features a 39.9% larger than (Mi Smart Band
+              3) Amold color full-touch display with adjustable brightness, so
+              everythingis clear ascan be.</small
+            >
+            <!-- <a href="#" class="btn">JLK Empire</a> -->
+            <!-- <a href="#" class="btn">Buy Now &#8594;</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial -->
+    <!-- <div class="testimonial">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-3">
+            <div class="rating">
+              <img src="Quotation/Open quotation.png" />
+            </div>
+            <p>
+              I just bought my phone from this store and I couldn’t be happier
+              with my experience. The delivery was fast, the customer service
+              was excellent, and the phone works perfectly without any issues.
+              The prices are very reasonable, and everything went smoothly from
+              purchase to delivery. I’m extremely satisfied with my new phone
+              and would highly recommend this store to anyone. Thank you for the
+              great service.
+            </p>
+            <div class="rating">
+              <img src="stars/Stars-1.png" />
+            </div>
+            <img src="images/user-1.png" />
+            <h3>Mrs. Glory</h3>
+          </div>
+          <div class="col-3">
+            <div class="rating">
+              <img src="Quotation/Open quotation.png" />
+            </div>
+            <p>
+              I absolutely love my new phone! It arrived much quicker than I
+              expected and works perfectly, exactly as described on the website.
+              I was a bit unsure at first, but this store completely exceeded my
+              expectations. The quality is excellent, the delivery was fast, and
+              the entire shopping experience was smooth from start to finish. I
+              would definitely recommend this store to anyone looking for a
+              reliable place to buy a phone.
+            </p>
+            <div class="rating">
+              <img src="stars/Stars-1.png" />
+            </div>
+            <img src="images/user-2.png" />
+            <h3>Mr. Mike Johnson</h3>
+          </div>
+
+          <div class="col-3">
+            <div class="rating">
+              <img src="Quotation/Open quotation.png" />
+            </div>
+            <p>
+              Buying from this website was incredibly easy and completely
+              stress-free. The ordering process was simple and straightforward,
+              my phone arrived right on time, and it was in perfect condition
+              exactly as described. Everything works flawlessly, and the overall
+              quality exceeded my expectations. I’m very satisfied with my
+              purchase and would confidently recommend this store to others
+            </p>
+            <div class="rating">
+              <img src="stars/Stars-3.png" />
+            </div>
+            <img src="images/user-3.png" />
+            <h3>Mrs. Olaoba James</h3>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn">
+      <ion-icon name="chevron-up-outline"></ion-icon>
+    </button>
+
+    <!-- footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Download app for Android and IOS Mobile phone.</p>
+            <div class="app-logo">
+              <img src="images/play-store.png" />
+              <img src="images/app-store.png" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img class="logo-icon" src="logo/JLK-LOGO.png" width="125px" />
+
+            <p>
+              We exist to sustainably make the power, benefits, and enjoyment of
+              phones and gadgets accessible to all.
+            </p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog Post</li>
+              <li>Return Policy</li>
+              <li>Join Affiliate</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow Us</h3>
+            <ul>
+              <li>
+                <a href="https://www.tiktok.com/@jlk8294" target="_blank">
+                  <ion-icon name="logo-tiktok"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/share/1KdBtpiGWG/?mibextid=wwXIfr"
+                  target="_blank">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/jlk_empire/" target="_blank">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+              <!-- <li>
+                <a href="https://www.youtube.com/@YOUR_HANDLE" target="_blank">
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+        <hr class="section-line" />
+        <div class="copy-container">
+          <p class="copyright">© 2026 JLK Empire</p>
+          <p>|</p>
+          <p>Designed & Developed by Kolawole Samuel Adewalure</p>
+        </div>
+      </div>
+    </div>
+    <!-- script here -->
+    <script src="js/cart.js"></script>
+    <script src="js/cart-page.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="js/dropdown.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/product-page.js"></script>
+    <script src="js/scrollTopBtn.js"></script>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Product added successful ✅</div>
+    <!-- scrollToBtn -->
+    <button id="scrollTopBtn">&#94;</button>
+
+    <!-- It captures the product details when an image is clicked. -->
+    <!-- this is design for product-page.html -->
+    <script>
+      document.querySelectorAll(".product-link").forEach((item) => {
+        item.addEventListener("click", function () {
+          // Create an object with the product data from the clicked image
+          const productData = {
+            id: this.getAttribute("data-id"),
+            name: this.getAttribute("data-name"),
+            price: this.getAttribute("data-price"),
+            image: this.getAttribute("data-image"),
+            description: this.getAttribute("data-description") || "",
+          };
+
+          // Save it to localStorage
+          localStorage.setItem("selectedProduct", JSON.stringify(productData));
+
+          // Redirect to the product page
+          window.location.href = "product-page.html";
+        });
+      });
+    </script>
+    <script src="js/search.js"></script>
+  </body>
+</html>

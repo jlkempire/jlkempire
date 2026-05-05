@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Address</title>
+    <link rel="stylesheet" href="css/add-address.css" />
+    <link rel="stylesheet" href="css/place-order.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header ehre -->
+    <header>
+      <a href="index.html">
+        <div class="logo">
+          <img src="logo/JLK-LOGO-black.png" width="45px" />
+        </div>
+      </a>
+      <h1>Add New Address</h1>
+      <nav>
+        <div class="call-outline">
+          <ion-icon name="call"></ion-icon>
+          <div>
+            <p>Need Help?</p>
+            <a href="#"><p class="contact-us">Contact us</p></a>
+          </div>
+        </div>
+
+        <div class="call-outline">
+          <ion-icon name="checkmark-circle"></ion-icon>
+          <div>
+            <p>Easy</p>
+            <p>Returns</p>
+          </div>
+        </div>
+
+        <div class="call-outline">
+          <ion-icon name="construct"></ion-icon>
+          <div>
+            <p>Secure</p>
+            <p>Payments</p>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="checkout-container">
+      <!-- LEFT -->
+      <section class="checkout-left">
+        <div class="step active">
+          <h3>1. CUSTOMER ADDRESS</h3>
+
+          <form class="address-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" id="firstName" value="Kolawole" />
+              </div>
+
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" id="lastName" value="Adewalure" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="emailAddress">Email Address</label>
+                <div class="email-input">
+                  <input
+                    type="email"
+                    id="emailAddress"
+                    placeholder="Enter your email"
+                    required
+                    style="
+                      width: 100%;
+                      padding: 10px;
+                      border: 1px solid #ccc;
+                      border-radius: 4px;
+                    " />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Phone Number</label>
+                <div class="phone-input">
+                  <span class="prefix">+234</span>
+                  <input type="text" id="phoneNumber" value="8102839713" />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group full">
+              <label>Delivery Address</label>
+              <input
+                type="text"
+                id="streetAddress"
+                placeholder="Enter your Address" />
+            </div>
+
+            <div class="form-group full">
+              <label>Landmark</label>
+              <input type="text" placeholder="Landmark" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>State</label>
+                <select id="state">
+                  <option value="">Please select</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>LGA</label>
+                <select id="city" disabled>
+                  <option value="">Please select</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="checkbox">
+              <input type="checkbox" id="default" />
+              <label for="default">Set as Default Address</label>
+            </div>
+
+            <div class="step-actions">
+              <a href="place-order.html" id="cancel-link" class="cancel"
+                >Cancel</a
+              >
+              <button type="submit" class="primary">Save</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="step disabled">
+          <h3>2. DELIVERY DETAILS</h3>
+        </div>
+
+        <div class="step disabled">
+          <h3>3. PAYMENT METHOD</h3>
+        </div>
+      </section>
+
+      <!-- RIGHT -->
+      <aside class="checkout-right">
+        <h3>Order summary</h3>
+        <hr />
+        <div class="summary-row">
+          <span>Item's total (1)</span>
+          <strong>₦ 52,198</strong>
+        </div>
+        <hr />
+        <div class="summary-row total">
+          <span>Total</span>
+          <strong>₦ 53,698</strong>
+        </div>
+        <hr />
+        <p class="voucher-info">
+          You will be able to add a voucher when selecting your payment method.
+        </p>
+        <hr />
+        <button class="confirm disabled">Confirm order</button>
+
+        <p class="terms">
+          By proceeding, you are automatically accepting the
+          <a href="#">Terms & Conditions</a>
+        </p>
+      </aside>
+    </main>
+    <footer>
+      <a href="index.html">← Go back & continue shopping</a>
+    </footer>
+
+    <!-- Nigeria state and cities -->
+    <script>
+      const nigeriaData = {
+        Abia: [
+          "Aba North",
+          "Aba South",
+          "Arochukwu",
+          "Bende",
+          "Ikwuano",
+          "Isiala Ngwa North",
+          "Isiala Ngwa South",
+          "Isuikwuato",
+          "Obingwa",
+          "Ohafia",
+          "Osisioma",
+          "Ugwunagbo",
+          "Ukwa East",
+          "Ukwa West",
+          "Umuahia North",
+          "Umuahia South",
+          "Umu Nneochi",
+        ],
+
+        Adamawa: [
+          "Demsa",
+          "Fufore",
+          "Ganye",
+          "Girei",
+          "Gombi",
+          "Guyuk",
+          "Hong",
+          "Jada",
+          "Lamurde",
+          "Madagali",
+          "Maiha",
+          "Mayo-Belwa",
+          "Michika",
+          "Mubi North",
+          "Mubi South",
+          "Numan",
+          "Shelleng",
+          "Song",
+          "Toungo",
+          "Yola North",
+          "Yola South",
+        ],
+
+        AkwaIbom: [
+          "Abak",
+          "Eastern Obolo",
+          "Eket",
+          "Esit Eket",
+          "Essien Udim",
+          "Etim Ekpo",
+          "Etinan",
+          "Ibeno",
+          "Ibesikpo Asutan",
+          "Ibiono Ibom",
+          "Ika",
+          "Ikono",
+          "Ikot Abasi",
+          "Ikot Ekpene",
+          "Ini",
+          "Itu",
+          "Mbo",
+          "Mkpat-Enin",
+          "Nsit-Atai",
+          "Nsit-Ibom",
+          "Nsit-Ubium",
+          "Obot Akara",
+          "Okobo",
+          "Onna",
+          "Oron",
+          "Oruk Anam",
+          "Udung-Uko",
+          "Ukanafun",
+          "Uruan",
+          "Urue-Offong/Oruko",
+          "Uyo",
+        ],
+
+        Anambra: [
+          "Aguata",
+          "Anambra East",
+          "Anambra West",
+          "Anaocha",
+          "Awka North",
+          "Awka South",
+          "Ayamelum",
+          "Dunukofia",
+          "Ekwusigo",
+          "Idemili North",
+          "Idemili South",
+          "Ihiala",
+          "Njikoka",
+          "Nnewi North",
+          "Nnewi South",
+          "Ogbaru",
+          "Onitsha North",
+          "Onitsha South",
+          "Orumba North",
+          "Orumba South",
+          "Oyi",
+        ],
+
+        Bauchi: [
+          "Alkaleri",
+          "Bauchi",
+          "Bogoro",
+          "Damban",
+          "Darazo",
+          "Dass",
+          "Gamawa",
+          "Ganjuwa",
+          "Giade",
+          "Itas/Gadau",
+          "Jama'are",
+          "Katagum",
+          "Kirfi",
+          "Misau",
+          "Ningi",
+          "Shira",
+          "Tafawa Balewa",
+          "Toro",
+          "Warji",
+          "Zaki",
+        ],
+
+        Bayelsa: [
+          "Brass",
+          "Ekeremor",
+          "Kolokuma/Opokuma",
+          "Nembe",
+          "Ogbia",
+          "Sagbama",
+          "Southern Ijaw",
+          "Yenagoa",
+        ],
+
+        Benue: [
+          "Ado",
+          "Agatu",
+          "Apa",
+          "Buruku",
+          "Gboko",
+          "Guma",
+          "Gwer East",
+          "Gwer West",
+          "Katsina-Ala",
+          "Konshisha",
+          "Kwande",
+          "Logo",
+          "Makurdi",
+          "Obi",
+          "Ogbadibo",
+          "Ohimini",
+          "Oju",
+          "Okpokwu",
+          "Otukpo",
+          "Tarka",
+          "Ukum",
+          "Ushongo",
+          "Vandeikya",
+        ],
+
+        Borno: [
+          "Abadam",
+          "Askira/Uba",
+          "Bama",
+          "Bayo",
+          "Biu",
+          "Chibok",
+          "Damboa",
+          "Dikwa",
+          "Gubio",
+          "Guzamala",
+          "Gwoza",
+          "Hawul",
+          "Jere",
+          "Kaga",
+          "Kala/Balge",
+          "Konduga",
+          "Kukawa",
+          "Kwaya Kusar",
+          "Mafa",
+          "Magumeri",
+          "Maiduguri",
+          "Marte",
+          "Mobbar",
+          "Monguno",
+          "Ngala",
+          "Nganzai",
+          "Shani",
+        ],
+
+        CrossRiver: [
+          "Abi",
+          "Akamkpa",
+          "Akpabuyo",
+          "Bakassi",
+          "Bekwarra",
+          "Biase",
+          "Boki",
+          "Calabar Municipal",
+          "Calabar South",
+          "Etung",
+          "Ikom",
+          "Obanliku",
+          "Obubra",
+          "Obudu",
+          "Odukpani",
+          "Ogoja",
+          "Yakurr",
+          "Yala",
+        ],
+
+        Delta: [
+          "Aniocha North",
+          "Aniocha South",
+          "Bomadi",
+          "Burutu",
+          "Ethiope East",
+          "Ethiope West",
+          "Ika North East",
+          "Ika South",
+          "Isoko North",
+          "Isoko South",
+          "Ndokwa East",
+          "Ndokwa West",
+          "Okpe",
+          "Oshimili North",
+          "Oshimili South",
+          "Patani",
+          "Sapele",
+          "Udu",
+          "Ughelli North",
+          "Ughelli South",
+          "Ukwuani",
+          "Uvwie",
+          "Warri North",
+          "Warri South",
+          "Warri South West",
+        ],
+
+        Ebonyi: [
+          "Abakaliki",
+          "Afikpo North",
+          "Afikpo South",
+          "Ebonyi",
+          "Ezza North",
+          "Ezza South",
+          "Ikwo",
+          "Ishielu",
+          "Ivo",
+          "Izzi",
+          "Ohaozara",
+          "Ohaukwu",
+          "Onicha",
+        ],
+
+        Edo: [
+          "Akoko-Edo",
+          "Egor",
+          "Esan Central",
+          "Esan North-East",
+          "Esan South-East",
+          "Esan West",
+          "Etsako Central",
+          "Etsako East",
+          "Etsako West",
+          "Igueben",
+          "Ikpoba-Okha",
+          "Orhionmwon",
+          "Oredo",
+          "Ovia North-East",
+          "Ovia South-West",
+          "Owan East",
+          "Owan West",
+          "Uhunmwonde",
+        ],
+
+        Ekiti: [
+          "Ado Ekiti",
+          "Efon",
+          "Ekiti East",
+          "Ekiti South-West",
+          "Ekiti West",
+          "Emure",
+          "Gbonyin",
+          "Ido-Osi",
+          "Ijero",
+          "Ikere",
+          "Ikole",
+          "Ilejemeje",
+          "Irepodun/Ifelodun",
+          "Ise/Orun",
+          "Moba",
+          "Oye",
+        ],
+
+        Enugu: [
+          "Aninri",
+          "Awgu",
+          "Enugu East",
+          "Enugu North",
+          "Enugu South",
+          "Ezeagu",
+          "Igbo-Etiti",
+          "Igbo-Eze North",
+          "Igbo-Eze South",
+          "Isi-Uzo",
+          "Nkanu East",
+          "Nkanu West",
+          "Nsukka",
+          "Oji River",
+          "Udenu",
+          "Udi",
+          "Uzo-Uwani",
+        ],
+
+        FCT: [
+          "Abaji",
+          "Abuja Municipal",
+          "Bwari",
+          "Gwagwalada",
+          "Kuje",
+          "Kwali",
+        ],
+
+        Lagos: [
+          "Agege",
+          "Ajeromi-Ifelodun",
+          "Alimosho",
+          "Amuwo-Odofin",
+          "Apapa",
+          "Badagry",
+          "Epe",
+          "Eti-Osa",
+          "Ibeju-Lekki",
+          "Ifako-Ijaiye",
+          "Ikeja",
+          "Ikorodu",
+          "Kosofe",
+          "Lagos Island",
+          "Lagos Mainland",
+          "Mushin",
+          "Ojo",
+          "Oshodi-Isolo",
+          "Shomolu",
+          "Surulere",
+        ],
+        Gombe: [
+          "Akko",
+          "Balanga",
+          "Billiri",
+          "Dukku",
+          "Funakaye",
+          "Gombe",
+          "Kaltungo",
+          "Kwami",
+          "Nafada",
+          "Shongom",
+          "Yamaltu/Deba",
+        ],
+        Imo: [
+          "Aboh Mbaise",
+          "Ahiazu Mbaise",
+          "Ehime Mbano",
+          "Ezinihitte",
+          "Ideato North",
+          "Ideato South",
+          "Ihitte/Uboma",
+          "Ikeduru",
+          "Isiala Mbano",
+          "Isu",
+          "Njaba",
+          "Nwangele",
+          "Nkwerre",
+          "Obowo",
+          "Oguta",
+          "Ohaji/Egbema",
+          "Okigwe",
+          "Orlu",
+          "Orsu",
+          "Oru East",
+          "Oru West",
+          "Owerri Municipal",
+          "Owerri North",
+          "Owerri South",
+          "Onuimo",
+        ],
+        Jigawa: [
+          "Auyo",
+          "Babura",
+          "Biriniwa",
+          "Birnin Kudu",
+          "Buji",
+          "Dutse",
+          "Gagarawa",
+          "Garki",
+          "Gumel",
+          "Guri",
+          "Gwaram",
+          "Gwiwa",
+          "Hadejia",
+          "Jahun",
+          "Kafin Hausa",
+          "Kaugama",
+          "Kazaure",
+          "Kiri Kasama",
+          "Kiyawa",
+          "Maigatari",
+          "Malam Madori",
+          "Miga",
+          "Ringim",
+          "Roni",
+          "Sule Tankarkar",
+          "Taura",
+          "Yankwashi",
+        ],
+        Kaduna: [
+          "Birnin Gwari",
+          "Chikun",
+          "Giwa",
+          "Igabi",
+          "Ikara",
+          "Jaba",
+          "Jema'a",
+          "Kachia",
+          "Kaduna North",
+          "Kaduna South",
+          "Kagarko",
+          "Kajuru",
+          "Kaura",
+          "Kauru",
+          "Kubau",
+          "Kudan",
+          "Lere",
+          "Makarfi",
+          "Sabon Gari",
+          "Sanga",
+          "Soba",
+          "Zangon Kataf",
+          "Zaria",
+        ],
+        Kano: [
+          "Ajingi",
+          "Albasu",
+          "Bagwai",
+          "Bebeji",
+          "Bichi",
+          "Bunkure",
+          "Dala",
+          "Dambatta",
+          "Dawakin Kudu",
+          "Dawakin Tofa",
+          "Doguwa",
+          "Fagge",
+          "Gabasawa",
+          "Garko",
+          "Garun Mallam",
+          "Gaya",
+          "Gezawa",
+          "Gwale",
+          "Gwarzo",
+          "Kabo",
+          "Kano Municipal",
+          "Karaye",
+          "Kibiya",
+          "Kiru",
+          "Kumbotso",
+          "Kunchi",
+          "Kura",
+          "Madobi",
+          "Makoda",
+          "Minjibir",
+          "Nasarawa",
+          "Rano",
+          "Rimin Gado",
+          "Rogo",
+          "Shanono",
+          "Sumaila",
+          "Takai",
+          "Tarauni",
+          "Tofa",
+          "Tsanyawa",
+          "Tudun Wada",
+          "Ungogo",
+          "Warawa",
+          "Wudil",
+        ],
+        Katsina: [
+          "Bakori",
+          "Batagarawa",
+          "Batsari",
+          "Baure",
+          "Bindawa",
+          "Charanchi",
+          "Dandume",
+          "Danja",
+          "Dan Musa",
+          "Daura",
+          "Dutsi",
+          "Dutsin Ma",
+          "Faskari",
+          "Funtua",
+          "Ingawa",
+          "Jibia",
+          "Kafur",
+          "Kaita",
+          "Kankara",
+          "Kankia",
+          "Katsina",
+          "Kurfi",
+          "Kusada",
+          "Mai'Adua",
+          "Malumfashi",
+          "Mani",
+          "Mashi",
+          "Matazu",
+          "Musawa",
+          "Rimi",
+          "Sabuwa",
+          "Safana",
+          "Sandamu",
+          "Zango",
+        ],
+        Kebbi: [
+          "Aleiro",
+          "Arewa Dandi",
+          "Argungu",
+          "Augie",
+          "Bagudo",
+          "Birnin Kebbi",
+          "Bunza",
+          "Dandi",
+          "Fakai",
+          "Gwandu",
+          "Jega",
+          "Kalgo",
+          "Koko/Besse",
+          "Maiyama",
+          "Ngaski",
+          "Sakaba",
+          "Shanga",
+          "Suru",
+          "Wasagu/Danko",
+          "Yauri",
+          "Zuru",
+        ],
+        Kogi: [
+          "Adavi",
+          "Ajaokuta",
+          "Ankpa",
+          "Bassa",
+          "Dekina",
+          "Ibaji",
+          "Idah",
+          "Igalamela Odolu",
+          "Ijumu",
+          "Kabba/Bunu",
+          "Kogi",
+          "Lokoja",
+          "Mopa Muro",
+          "Ofu",
+          "Ogori/Magongo",
+          "Okehi",
+          "Okene",
+          "Olamaboro",
+          "Omala",
+          "Yagba East",
+          "Yagba West",
+        ],
+        Kwara: [
+          "Asa",
+          "Baruten",
+          "Edu",
+          "Ekiti",
+          "Ifelodun",
+          "Ilorin East",
+          "Ilorin South",
+          "Ilorin West",
+          "Irepodun",
+          "Isin",
+          "Kaiama",
+          "Moro",
+          "Offa",
+          "Oke Ero",
+          "Oyun",
+          "Pategi",
+        ],
+        Nasarawa: [
+          "Akwanga",
+          "Awe",
+          "Doma",
+          "Karu",
+          "Keana",
+          "Keffi",
+          "Kokona",
+          "Lafia",
+          "Nasarawa",
+          "Nasarawa Egon",
+          "Obi",
+          "Toto",
+          "Wamba",
+        ],
+        Niger: [
+          "Agaie",
+          "Agwara",
+          "Bida",
+          "Borgu",
+          "Bosso",
+          "Chanchaga",
+          "Edati",
+          "Gbako",
+          "Gurara",
+          "Katcha",
+          "Kontagora",
+          "Lapai",
+          "Lavun",
+          "Magama",
+          "Mariga",
+          "Mashegu",
+          "Mokwa",
+          "Munya",
+          "Paikoro",
+          "Rafi",
+          "Rijau",
+          "Shiroro",
+          "Suleja",
+          "Tafa",
+          "Wushishi",
+        ],
+        Ogun: [
+          "Abeokuta North",
+          "Abeokuta South",
+          "Ado-Odo/Ota",
+          "Ewekoro",
+          "Ifo",
+          "Ijebu East",
+          "Ijebu North",
+          "Ijebu North East",
+          "Ijebu Ode",
+          "Ikenne",
+          "Imeko Afon",
+          "Ipokia",
+          "Obafemi Owode",
+          "Odeda",
+          "Odogbolu",
+          "Ogun Waterside",
+          "Remo North",
+          "Shagamu",
+          "Yewa North",
+          "Yewa South",
+        ],
+        Ondo: [
+          "Akoko North-East",
+          "Akoko North-West",
+          "Akoko South-East",
+          "Akoko South-West",
+          "Akure North",
+          "Akure South",
+          "Ese Odo",
+          "Idanre",
+          "Ifedore",
+          "Ilaje",
+          "Ile Oluji/Okeigbo",
+          "Irele",
+          "Odigbo",
+          "Okitipupa",
+          "Ondo East",
+          "Ondo West",
+          "Ose",
+          "Owo",
+        ],
+        Osun: [
+          "Atakumosa East",
+          "Atakumosa West",
+          "Aiyedaade",
+          "Aiyedire",
+          "Boluwaduro",
+          "Boripe",
+          "Ede North",
+          "Ede South",
+          "Ife Central",
+          "Ife East",
+          "Ife North",
+          "Ife South",
+          "Egbedore",
+          "Ejigbo",
+          "Ifedayo",
+          "Ifelodun",
+          "Ila",
+          "Ilesa East",
+          "Ilesa West",
+          "Irepodun",
+          "Irewole",
+          "Isokan",
+          "Iwo",
+          "Obokun",
+          "Odo Otin",
+          "Ola Oluwa",
+          "Olorunda",
+          "Oriade",
+          "Orolu",
+          "Osogbo",
+        ],
+        Oyo: [
+          "Afijio",
+          "Akinyele",
+          "Atiba",
+          "Atisbo",
+          "Egbeda",
+          "Ibadan North",
+          "Ibadan North-East",
+          "Ibadan North-West",
+          "Ibadan South-East",
+          "Ibadan South-West",
+          "Ibarapa Central",
+          "Ibarapa East",
+          "Ibarapa North",
+          "Ido",
+          "Irepo",
+          "Iseyin",
+          "Itesiwaju",
+          "Iwajowa",
+          "Kajola",
+          "Lagelu",
+          "Ogbomosho North",
+          "Ogbomosho South",
+          "Ogo Oluwa",
+          "Olorunsogo",
+          "Oluyole",
+          "Ona Ara",
+          "Orelope",
+          "Ori Ire",
+          "Oyo East",
+          "Oyo West",
+          "Saki East",
+          "Saki West",
+          "Surulere",
+        ],
+        Plateau: [
+          "Barkin Ladi",
+          "Bassa",
+          "Jos East",
+          "Jos North",
+          "Jos South",
+          "Kanam",
+          "Kanke",
+          "Langtang North",
+          "Langtang South",
+          "Mangu",
+          "Mikang",
+          "Pankshin",
+          "Qua'an Pan",
+          "Riyom",
+          "Shendam",
+          "Wase",
+        ],
+        Rivers: [
+          "Abua/Odual",
+          "Ahoada East",
+          "Ahoada West",
+          "Akuku-Toru",
+          "Andoni",
+          "Asari-Toru",
+          "Bonny",
+          "Degema",
+          "Eleme",
+          "Emuoha",
+          "Etche",
+          "Gokana",
+          "Ikwerre",
+          "Khana",
+          "Obio/Akpor",
+          "Ogba/Egbema/Ndoni",
+          "Ogu/Bolo",
+          "Okrika",
+          "Omuma",
+          "Opobo/Nkoro",
+          "Oyigbo",
+          "Port Harcourt",
+          "Tai",
+        ],
+        Sokoto: [
+          "Binji",
+          "Bodinga",
+          "Dange Shuni",
+          "Gada",
+          "Goronyo",
+          "Gudu",
+          "Gwadabawa",
+          "Illela",
+          "Isa",
+          "Kebbe",
+          "Kware",
+          "Rabah",
+          "Sabon Birni",
+          "Shagari",
+          "Silame",
+          "Sokoto North",
+          "Sokoto South",
+          "Tambuwal",
+          "Tangaza",
+          "Tureta",
+          "Wamako",
+          "Wurno",
+          "Yabo",
+        ],
+        Taraba: [
+          "Ardo Kola",
+          "Bali",
+          "Donga",
+          "Gashaka",
+          "Gassol",
+          "Ibi",
+          "Jalingo",
+          "Karim Lamido",
+          "Kumi",
+          "Lau",
+          "Sardauna",
+          "Takum",
+          "Ussa",
+          "Wukari",
+          "Yorro",
+          "Zing",
+        ],
+        Yobe: [
+          "Bade",
+          "Bursari",
+          "Damaturu",
+          "Fika",
+          "Fune",
+          "Geidam",
+          "Gujba",
+          "Gulani",
+          "Jakusko",
+          "Karasuwa",
+          "Machina",
+          "Nangere",
+          "Nguru",
+          "Potiskum",
+          "Tarmuwa",
+          "Yunusari",
+          "Yusufari",
+        ],
+        Zamfara: [
+          "Anka",
+          "Bakura",
+          "Birnin Magaji/Kiyaw",
+          "Bukkuyum",
+          "Bungudu",
+          "Gummi",
+          "Gusau",
+          "Kaura Namoda",
+          "Maradun",
+          "Maru",
+          "Shinkafi",
+          "Talata Mafara",
+          "Chafe",
+          "Zurmi",
+        ],
+      };
+
+      const stateSelect = document.getElementById("state");
+      const citySelect = document.getElementById("city");
+      const addressForm = document.querySelector(".address-form");
+
+      // 1. Populate States Dropdown
+      Object.keys(nigeriaData).forEach((state) => {
+        const option = document.createElement("option");
+        option.value = state;
+        option.textContent = state.replace(/([A-Z])/g, " $1").trim();
+        stateSelect.appendChild(option);
+      });
+
+      // 2. Handle City Selection when State changes
+      stateSelect.addEventListener("change", () => {
+        const cities = nigeriaData[stateSelect.value];
+        citySelect.innerHTML = '<option value="">Please select</option>';
+        citySelect.disabled = true;
+
+        if (cities) {
+          cities.forEach((city) => {
+            const option = document.createElement("option");
+            option.value = city;
+            option.textContent = city;
+            citySelect.appendChild(option);
+          });
+          citySelect.disabled = false;
+        }
+      });
+
+      // Updated Cancel Logic
+      const cancelLink = document.getElementById("cancel-link");
+
+      if (cancelLink) {
+        cancelLink.addEventListener("click", (e) => {
+          const confirmCancel = confirm(
+            "Are you sure you want to cancel? Changes won't be saved."
+          );
+
+          if (!confirmCancel) {
+            e.preventDefault(); // Stay on page if they click 'Cancel' in the popup
+          }
+        });
+      }
+
+      // 3. Handle Form Submission (Save to LocalStorage)
+      addressForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+
+        // 1. ADD THIS LINE TO CAPTURE THE EMAIL
+        const email = document.getElementById("emailAddress").value;
+
+        const phone = document.getElementById("phoneNumber").value;
+        const street = document.getElementById("streetAddress").value;
+        const state = stateSelect.value;
+        const city = citySelect.value;
+
+        const isDefault = document.getElementById("default").checked;
+
+        // 2. ADD 'email' TO THIS CHECK
+        if (!street || !state || !city || !email) {
+          alert("Please fill in your email and complete address details.");
+          return;
+        }
+
+        // Create the object to match what place-order.html expects
+        const customerInfo = {
+          fullName: `${firstName} ${lastName}`,
+          email: email, // 3. ADD THIS LINE SO THE EMAIL IS SAVED
+          fullAddress: `${street}, ${city}, ${state} State.`,
+          displayLine2: `| ${city} - (Shipping Area) | +234 ${phone}`,
+          isDefault: isDefault,
+        };
+
+        localStorage.setItem("customerAddress", JSON.stringify(customerInfo));
+        localStorage.setItem("userName", customerInfo.fullName);
+
+        if (isDefault) {
+          localStorage.setItem("defaultAddress", JSON.stringify(customerInfo));
+        }
+
+        // Redirect
+        window.location.href = "place-order.html";
+      });
+
+      // 4. Update Order Summary (Check your cart key name!)
+      function updateSummary() {
+        const cart = JSON.parse(localStorage.getItem("jlk_cart")) || [];
+        const subtotal = cart.reduce(
+          (acc, item) => acc + Number(item.price) * (item.quantity || 1),
+          0
+        );
+        const delivery = 2000;
+
+        document.querySelector(
+          ".summary-row strong"
+        ).innerText = `₦ ${subtotal.toLocaleString()}`;
+        document.querySelector(".summary-row.total strong").innerText = `₦ ${(
+          subtotal + delivery
+        ).toLocaleString()}`;
+        document.querySelector(
+          ".summary-row span"
+        ).innerText = `Item's total (${cart.length})`;
+      }
+
+      updateSummary();
+    </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

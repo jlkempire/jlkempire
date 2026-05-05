@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results page</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/search-results.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/scrollTopBtn.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <!-- Add Clerk Script -->
+    <script
+      async
+      crossorigin="anonymous"
+      data-clerk-publishable-key="pk_test_c21hc2hpbmctaGFsaWJ1dC04LmNsZXJrLmFjY291bnRzLmRldiQ"
+      src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- navebar -->
+      <div class="min-container-navbar">
+        <div class="navbar">
+          <!-- Logo -->
+          <a href="index.html">
+            <img class="logo-icon" src="logo/JLK-LOGO.png" width="45px" />
+          </a>
+
+          <!-- Search -->
+          <div class="search-box">
+            <input
+              id="mainSearchInput"
+              type="text"
+              placeholder="Search for products, brands and categories..."
+              autocomplete="off" />
+            <div id="searchSuggestions" class="suggestions-dropdown"></div>
+          </div>
+          <ion-icon
+            id="searchIconBtn"
+            class="search-icon"
+            name="search-outline"
+            style="cursor: pointer"></ion-icon>
+
+          <!-- Account -->
+          <div class="drop-menu" id="accountToggle">
+            <ion-icon name="person-outline"></ion-icon>
+            <p id="accountName">Account</p>
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </div>
+
+          <div class="account-dropdown hidden" id="accountDropdown"></div>
+
+          <!-- Right side -->
+          <div class="nav-right">
+            <!-- Cart -->
+            <a href="cart.html" class="cart">
+              <ion-icon name="cart-outline" style="font-size: 23px"></ion-icon>
+              <span class="cart-count">0</span>
+              <p>Cart</p>
+            </a>
+
+            <!-- Login Modal -->
+            <!-- <div id="loginModal" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="closeLogin()">&times;</span>
+
+                <h2>Please Your Details</h2>
+                <p class="subtitle">Click continue to Sign in or Sign up!</p>
+
+                 <div class="divider">
+                  <span>only</span>
+                </div>
+
+                <label>Email address</label>
+                <input
+                  type="email"
+                  id="emailInput"
+                  placeholder="Enter your email address" />
+
+                 <button onclick="Clerk.openSignIn()" class="continue-btn">
+                  Continue ▶
+                </button> 
+              </div>
+            </div> -->
+          </div>
+
+          <!-- Mobile menu icon -->
+          <!-- <img
+              src="images/menu.png"
+              class="menu-icon"
+              onclick="menutoggle()" />
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ROWS -->
+    <!-- <div class="row-front">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <h1>
+              Gadgets you'll love. <br />
+              Prices you'll trust.
+            </h1>
+            <p>
+              Explore cutting-edge smartphones built for speed, style, and
+              reliability. <br />Quality phones, trusted brands, and support you
+              can rely on.
+            </p>
+            <a href="#" class="btn">Explore Now &#8594;</a>
+          </div>
+
+          <div class="col-2">
+            <img src="images/iphone17-BG.png" />
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Featured Categories -->
+    <!-- <div class="categores">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-3"><img src="Pictures/pic-1.png" /></div>
+          <div class="col-3"><img src="Pictures/pic-2.png" /></div>
+          <div class="col-3"><img src="Pictures/pic-3.png" /></div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- IPhone & Accessories-->
+    <div class="small-container">
+      <!-- <h2 class="title">Phones & Accessories</h2> -->
+      <div class="row">
+        <div class="col-4">
+          <img
+            src="Pictures/p1.png"
+            class="product-link"
+            data-id="tecno-spark-pro"
+            data-name="Tecno Spark 10 Pro - 6.8-inch display - 8GB RAM - 256GB ROM"
+            data-description="Package includes charger cord, charger head, earphones, and adaptor"
+            data-price="300000"
+            data-image="Pictures/p1.png"
+            style="cursor: pointer" />
+
+          <h4>Tecno Spark 10 Pro</h4>
+          <p>Dual SIM with 4G LTE</p>
+
+          <div class="rating">
+            <img src="stars/Stars-2.png" />
+          </div>
+
+          <p>&#8358;300,000</p>
+
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="tecno-spark-pro"
+            data-name="Tecno Spark 10 Pro - 6.8-inch display - 8GB RAM - 256GB ROM"
+            data-price="300000"
+            data-image="Pictures/p1.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p2.png"
+            class="product-link"
+            data-id="Apple-iPhone-17pro"
+            data-name="Apple iPhone 17 Pro - 256GB - Cosmic Orange E-sim"
+            data-price="1722950"
+            data-image="Pictures/p2.png"
+            style="cursor: pointer" />
+
+          <h4>Apple iPhone 17 Pro</h4>
+          <p>256GB - Cosmic Orange</p>
+          <div class="rating">
+            <img src="stars/Stars-3.png" />
+          </div>
+          <p>&#8358;1,722,950</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Apple-iPhone-17pro"
+            data-name="Apple iPhone 17 Pro - 256GB - Cosmic Orange E-sim"
+            data-price="1722950"
+            data-image="Pictures/p2.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p3.png"
+            class="product-link"
+            data-id="iPhone12-Pro-Max"
+            data-name="Apple iPhone 12 Pro Max - 6.7-inch - 128GB ROM+6GB RAM - Single Sim - 3687mah - Pouch & Screen Protector-Graphite"
+            data-price="629000"
+            data-image="Pictures/p3.png"
+            style="cursor: pointer" />
+
+          <h4>Apple iPhone 12 Pro Max</h4>
+          <p>128GB ROM+6GB RAM</p>
+          <div class="rating">
+            <img src="stars/Stars-3.png" />
+          </div>
+          <p>&#8358;629,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="iPhone12-Pro-Max"
+            data-name="Apple iPhone 12 Pro Max - 6.7-inch - 128GB ROM+6GB RAM - Single Sim - 3687mah - Pouch & Screen Protector-Graphite"
+            data-price="629000"
+            data-image="Pictures/p3.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p4.png"
+            class="product-link"
+            data-id="apple-iphone-15pro-max"
+            data-name="Apple iPhone 15 Pro Max - 6.7-inch 256GB ROM - 8GB RAM - 1 Sim + Esim -5g - 4441mAh"
+            data-price="1389999"
+            data-image="Pictures/p4.png"
+            style="cursor: pointer" />
+
+          <h4>Apple iPhone 15 Pro Max</h4>
+          <p>256GB ROM - 8GB RAM</p>
+          <div class="rating">
+            <img src="stars/Stars-3.png" />
+          </div>
+          <p>&#8358;1,389,999</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="apple-iphone-15pro-max"
+            data-name="Apple iPhone 15 Pro Max - 6.7-inch 256GB ROM - 8GB RAM - 1 Sim + Esim -5g - 4441mAh"
+            data-price="1389999"
+            data-image="Pictures/p4.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p5.png"
+            class="product-link"
+            data-id="Apple-iphone-15pro"
+            data-name="Apple iPhone 15 Pro 6.1-inch - 256GB ROM + 8GB RAM - Nano Sim - 5g"
+            data-price="1179999"
+            data-image="Pictures/p5.png"
+            style="cursor: pointer" />
+
+          <h4>Apple iPhone 15 Pro</h4>
+          <p>256GB ROM + 8GB RAM</p>
+          <div class="rating">
+            <img src="stars/Stars-3.png" />
+          </div>
+          <p>&#8358;1,179,999</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Apple-iphone-15pro"
+            data-name="Apple iPhone 15 Pro 6.1-inch - 256GB ROM + 8GB RAM - Nano Sim - 5g"
+            data-price="1179999"
+            data-image="Pictures/p5.png">
+            Add to Cart
+          </a>
+        </div>
+        <!-- more here -->
+        <div class="col-4">
+          <img
+            src="Pictures/p6.png"
+            class="product-link"
+            data-id="apple-iphone-15pro"
+            data-name="Apple iPhone 15 Pro 128GB"
+            data-price="1650000"
+            data-image="Pictures/p6.png"
+            style="cursor: pointer" />
+          <h4>Apple iPhone 15 Pro</h4>
+          <p>128GB ROM + 8GB RAM</p>
+          <div class="rating">
+            <img src="stars/Stars-3.png" />
+          </div>
+          <p>&#8358;1,650,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="apple-iphone-15pro"
+            data-name="Apple iPhone 15 Pro 128GB"
+            data-price="1650000"
+            data-image="Pictures/p6.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p7.png"
+            class="product-link"
+            data-id="tecno-spark-20"
+            data-name="Tecno Spark 20 256GB"
+            data-price="215000"
+            data-image="Pictures/p7.png"
+            style="cursor: pointer" />
+          <h4>Tecno Spark 20</h4>
+          <p>256GB ROM + 8GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;215,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="tecno-spark-20"
+            data-name="Tecno Spark 20 256GB"
+            data-price="215000"
+            data-image="Pictures/p7.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p8.png"
+            class="product-link"
+            data-id="samsung-s24-ultra"
+            data-name="Samsung Galaxy S24 Ultra"
+            data-price="1850000"
+            data-image="Pictures/p8.png"
+            style="cursor: pointer" />
+          <h4>Samsung Galaxy S24 Ultra</h4>
+          <p>512GB ROM + 12GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;1,850,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="samsung-s24-ultra"
+            data-name="Samsung Galaxy S24 Ultra"
+            data-price="1850000"
+            data-image="Pictures/p8.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p9.png"
+            class="product-link"
+            data-id="infinix-note-40"
+            data-name="Infinix Note 40 Pro"
+            data-price="380000"
+            data-image="Pictures/p9.png"
+            style="cursor: pointer" />
+          <h4>Infinix Note 40 Pro</h4>
+          <p>256GB ROM + 8GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;380,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="infinix-note-40"
+            data-name="Infinix Note 40 Pro"
+            data-price="380000"
+            data-image="Pictures/p9.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p10.png"
+            class="product-link"
+            data-id="Apple-iphone-15pro"
+            data-name="Apple iPhone 15 Pro 6.1-inch - 256GB ROM + 8GB RAM"
+            data-price="1650000"
+            data-image="Pictures/p10.png"
+            style="cursor: pointer" />
+          <h4>Apple iPhone 15 Pro</h4>
+          <p>256GB ROM + 8GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;1,650,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Apple-iphone-15pro"
+            data-name="Apple iPhone 15 Pro 6.1-inch - 256GB ROM + 8GB RAM"
+            data-price="1650000"
+            data-image="Pictures/p10.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p11.png"
+            class="product-link"
+            data-id="Tecno-spark-40"
+            data-name="Tecno Spark 40 6.67-inch - 128GB ROM + 4GB RAM"
+            data-price="154999"
+            data-image="Pictures/p11.png"
+            style="cursor: pointer" />
+          <h4>Tecno Spark 40</h4>
+          <p>128GB ROM + 4GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;154,999</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Tecno-spark-40"
+            data-name="Tecno Spark 40 6.67-inch - 128GB ROM + 4GB RAM"
+            data-price="154999"
+            data-image="Pictures/p11.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p12.png"
+            class="product-link"
+            data-id="Samsung-galaxy-a07"
+            data-name="Samsung Galaxy A07 - 128GB ROM + 4GB RAM"
+            data-price="153174"
+            data-image="Pictures/p12.png"
+            style="cursor: pointer" />
+          <h4>Samsung Galaxy A07</h4>
+          <p>128GB ROM + 4GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;153,174</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Samsung-galaxy-a07"
+            data-name="Samsung Galaxy A07 - 128GB ROM + 4GB RAM"
+            data-price="153174"
+            data-image="Pictures/p12.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p13.png"
+            class="product-link"
+            data-id="Xiaomi-redmi-15c"
+            data-name="Xiaomi Redmi 15C - 128GB ROM + 6GB RAM"
+            data-price="148806"
+            data-image="Pictures/p13.png"
+            style="cursor: pointer" />
+          <h4>Xiaomi Redmi 15C</h4>
+          <p>128GB ROM + 6GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;148,806</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Xiaomi-redmi-15c"
+            data-name="Xiaomi Redmi 15C - 128GB ROM + 6GB RAM"
+            data-price="148806"
+            data-image="Pictures/p13.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p14.png"
+            class="product-link"
+            data-id="Nokia-G42-5G"
+            data-name="Nokia G42 5G - 128GB ROM + 6GB RAM - 50MP Triple Camera - So Grey"
+            data-price="345000"
+            data-image="Pictures/p14.png"
+            style="cursor: pointer" />
+
+          <h4>Nokia G42 5G</h4>
+          <p>128GB ROM + 6GB RAM</p>
+          <div class="rating">
+            <img src="stars/Stars-4.png" />
+          </div>
+          <p>&#8358;345,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Nokia-G42-5G"
+            data-name="Nokia G42 5G - 128GB ROM + 6GB RAM - 50MP Triple Camera - So Grey"
+            data-price="345000"
+            data-image="Pictures/p14.png">
+            Add to Cart
+          </a>
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p15.png"
+            class="product-link"
+            data-id="Poco-c85"
+            data-name="Poco C85 6.9-inch - 128GB ROM + 6GB RAM"
+            data-price="144999"
+            data-image="Pictures/p15.png"
+            style="cursor: pointer" />
+          <h4>Poco C85</h4>
+          <p>128GB ROM + 6GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;144,999</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Poco-c85"
+            data-name="Poco C85 6.9-inch - 128GB ROM + 6GB RAM"
+            data-price="144999"
+            data-image="Pictures/p15.png"
+            >Add to Cart</a
+          >
+        </div>
+      </div>
+
+      <!-- Computers & Tech Accessories -->
+      <!-- <h2 class="title">Computers & Tech Accessories</h2> -->
+      <div class="row">
+        <div class="col-4">
+          <img
+            src="Pictures/p16.png"
+            class="product-link"
+            data-id="hp-pavilion-15"
+            data-name="HP Pavilion 15 Laptop"
+            data-price="850000"
+            data-image="Pictures/p16.png"
+            style="cursor: pointer" />
+          <h4>HP Pavilion 15</h4>
+          <p>Intel Core i5 - 1TB SSD - 16GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;850,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="hp-pavilion-15"
+            data-name="HP Pavilion 15 Laptop"
+            data-price="850000"
+            data-image="Pictures/p16.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p17.png"
+            class="product-link"
+            data-id="dell-latitude-3420"
+            data-name="Dell Latitude 3420"
+            data-price="720000"
+            data-image="Pictures/p17.png"
+            style="cursor: pointer" />
+          <h4>Dell Latitude 3420</h4>
+          <p>Intel Core i5 - 512GB SSD - 8GB RAM</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;720,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="dell-latitude-3420"
+            data-name="Dell Latitude 3420"
+            data-price="720000"
+            data-image="Pictures/p17.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p18.png"
+            class="product-link"
+            data-id="HP-elitebook-1040-g9"
+            data-name="HP Elitebook 1040 G9 - Intel Core i7 - 16GB RAM - 512GB SSD"
+            data-price="1313110"
+            data-image="Pictures/p18.png"
+            style="cursor: pointer" />
+          <h4>HP Elitebook 1040 G9</h4>
+          <p>Core i7 - 16GB RAM - 512GB SSD</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;1,313,110</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="HP-elitebook-1040-g9"
+            data-name="HP Elitebook 1040 G9 - Intel Core i7 - 16GB RAM - 512GB SSD"
+            data-price="1313110"
+            data-image="Pictures/p18.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p19.png"
+            class="product-link"
+            data-id="Asus-vivobook-15"
+            data-name="Asus Vivobook 15 - Intel Core i5 - 8GB RAM - 512GB SSD"
+            data-price="645700"
+            data-image="Pictures/p19.png"
+            style="cursor: pointer" />
+          <h4>Asus Vivobook 15</h4>
+          <p>Core i5 - 8GB RAM - 512GB SSD</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;645,700</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Asus-vivobook-15"
+            data-name="Asus Vivobook 15 - Intel Core i5 - 8GB RAM - 512GB SSD"
+            data-price="645700"
+            data-image="Pictures/p19.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p20.png"
+            class="product-link"
+            data-id="Samsung-galaxy-book5-pro"
+            data-name="Samsung Galaxy Book5 Pro 360 - Intel Ultra - 16GB RAM"
+            data-price="4200000"
+            data-image="Pictures/p20.png"
+            style="cursor: pointer" />
+          <h4>Samsung Galaxy Book5 Pro</h4>
+          <p>Intel Ultra - 16GB RAM - Touch</p>
+          <div class="rating"><img src="stars/Stars-4.png" /></div>
+          <p>&#8358;4,200,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Samsung-galaxy-book5-pro"
+            data-name="Samsung Galaxy Book5 Pro 360 - Intel Ultra - 16GB RAM"
+            data-price="4200000"
+            data-image="Pictures/p20.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p21.png"
+            class="product-link"
+            data-id="sony-ps5-digital"
+            data-name="Sony PlayStation 5 Digital Edition"
+            data-price="890000"
+            data-image="Pictures/p21.png"
+            style="cursor: pointer" />
+          <h4>PlayStation 5 (PS5)</h4>
+          <p>Digital Edition - 825GB SSD</p>
+          <div class="rating">
+            <img src="stars/Stars-4.png" />
+          </div>
+          <p>&#8358;890,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="sony-ps5-digital"
+            data-name="Sony PlayStation 5 Digital Edition"
+            data-price="890000"
+            data-image="Pictures/p21.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p22.png"
+            class="product-link"
+            data-id="Starlink-standard-gen3"
+            data-name="Starlink Standard Kit - Gen 3 - White"
+            data-price="590000"
+            data-image="Pictures/p22.png"
+            style="cursor: pointer" />
+          <h4>Starlink Standard Kit</h4>
+          <p>High-Speed Satellite Internet</p>
+          <div class="rating">
+            <img src="stars/Stars-4.png" />
+          </div>
+          <p>&#8358;590,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Starlink-standard-gen3"
+            data-name="Starlink Standard Kit - Gen 3 - White"
+            data-price="590000"
+            data-image="Pictures/p22.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p23.png"
+            class="product-link"
+            data-id="Harman-kardon-onyx-9"
+            data-name="Harman Kardon ONYX STUDIO 9 Bluetooth Speaker"
+            data-price="415000"
+            data-image="Pictures/p23.png"
+            style="cursor: pointer" />
+          <h4>Harman Kardon Onyx 9</h4>
+          <p>Portable Stereo Speaker</p>
+          <div class="rating">
+            <img src="stars/Stars-4.png" />
+          </div>
+          <p>&#8358;415,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Harman-kardon-onyx-9"
+            data-name="Harman Kardon ONYX STUDIO 9 Bluetooth Speaker"
+            data-price="415000"
+            data-image="Pictures/p23.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p24.png"
+            class="product-link"
+            data-id="MTN-5g-router-cat4"
+            data-name="MTN Broadband 5G/CAT4 Router + 50GB Data"
+            data-price="80000"
+            data-image="Pictures/p24.png"
+            style="cursor: pointer" />
+          <h4>MTN Broadband Router</h4>
+          <p>5G/4G LTE High Speed</p>
+          <div class="rating">
+            <img src="stars/Stars-4.png" />
+          </div>
+          <p>&#8358;80,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="MTN-5g-router-cat4"
+            data-name="MTN Broadband 5G/CAT4 Router + 50GB Data"
+            data-price="280000"
+            data-image="Pictures/p24.png"
+            >Add to Cart</a
+          >
+        </div>
+
+        <div class="col-4">
+          <img
+            src="Pictures/p25.png"
+            class="product-link"
+            data-id="Lenovo-Ideapad-Slim3"
+            data-name="Lenovo IdeaPad Slim 3 - Intel Core i3 - 256GB SSD + 8GB RAM - Windows 11"
+            data-price="585000"
+            data-image="Pictures/p25.png"
+            style="cursor: pointer" />
+
+          <h4>Lenovo IdeaPad Slim 3</h4>
+          <p>Core i3 - 256GB SSD + 8GB RAM</p>
+          <div class="rating">
+            <img src="stars/Stars-4.png" />
+          </div>
+          <p>&#8358;585,000</p>
+          <a
+            href="#"
+            class="add-to-cart"
+            data-id="Lenovo-Ideapad-Slim3"
+            data-name="Lenovo IdeaPad Slim 3 - Intel Core i3 - 256GB SSD + 8GB RAM - Windows 11"
+            data-price="585000"
+            data-image="Pictures/p25.png">
+            Add to Cart
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- pagination -->
+    <!-- <div class="pagination">
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <span class="dots">…</span>
+      <a href="#">3,943</a>
+      <a href="#" class="next">Next »</a>
+    </div> -->
+    <!-- Offer -->
+    <!-- <div class="offer">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-2">
+            <img src="images/exclusive.png" class="offer-img" />
+          </div>
+          <div class="col-2">
+            <p>Exclusively Available on JLK Empire</p>
+            <h1>Smart Band 4</h1>
+            <small
+              >This Mi Smart Band 4 features a 39.9% larger than (Mi Smart Band
+              3) Amold color full-touch display with adjustable brightness, so
+              everythingis clear ascan be.</small
+            >
+            <a href="#" class="btn">Buy Now &#8594;</a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Testimonial -->
+    <!-- <div class="testimonial">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-3">
+            <div class="rating">
+              <img src="Quotation/Open quotation.png" />
+            </div>
+            <p>
+              I just bought my phone from this store and I couldn’t be happier
+              with my experience. The delivery was fast, the customer service
+              was excellent, and the phone works perfectly without any issues.
+              The prices are very reasonable, and everything went smoothly from
+              purchase to delivery. I’m extremely satisfied with my new phone
+              and would highly recommend this store to anyone. Thank you for the
+              great service.
+            </p>
+            <div class="rating">
+              <img src="stars/Stars-1.png" />
+            </div>
+            <img src="images/user-1.png" />
+            <h3>Mrs. Glory</h3>
+          </div>
+          <div class="col-3">
+            <div class="rating">
+              <img src="Quotation/Open quotation.png" />
+            </div>
+            <p>
+              I absolutely love my new phone! It arrived much quicker than I
+              expected and works perfectly, exactly as described on the website.
+              I was a bit unsure at first, but this store completely exceeded my
+              expectations. The quality is excellent, the delivery was fast, and
+              the entire shopping experience was smooth from start to finish. I
+              would definitely recommend this store to anyone looking for a
+              reliable place to buy a phone.
+            </p>
+            <div class="rating">
+              <img src="stars/Stars-1.png" />
+            </div>
+            <img src="images/user-2.png" />
+            <h3>Mr. Mike Johnson</h3>
+          </div>
+
+          <div class="col-3">
+            <div class="rating">
+              <img src="Quotation/Open quotation.png" />
+            </div>
+            <p>
+              Buying from this website was incredibly easy and completely
+              stress-free. The ordering process was simple and straightforward,
+              my phone arrived right on time, and it was in perfect condition
+              exactly as described. Everything works flawlessly, and the overall
+              quality exceeded my expectations. I’m very satisfied with my
+              purchase and would confidently recommend this store to others
+            </p>
+            <div class="rating">
+              <img src="stars/Stars-3.png" />
+            </div>
+            <img src="images/user-3.png" />
+            <h3>Mrs. Olaoba James</h3>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn">
+      <ion-icon name="chevron-up-outline"></ion-icon>
+    </button>
+
+    <!-- footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Download app for Android and IOS Mobile phone.</p>
+            <div class="app-logo">
+              <img src="images/play-store.png" />
+              <img src="images/app-store.png" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img class="logo-icon" src="logo/JLK-LOGO.png" width="125px" />
+
+            <p>
+              We exist to sustainably make the power, benefits, and enjoyment of
+              phones and gadgets accessible to all.
+            </p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog Post</li>
+              <li>Return Policy</li>
+              <li>Join Affiliate</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow Us</h3>
+            <ul>
+              <li><ion-icon name="logo-tiktok"></ion-icon></li>
+              <li><ion-icon name="logo-facebook"></ion-icon></li>
+              <li><ion-icon name="logo-instagram"></ion-icon></li>
+              <li><ion-icon name="logo-youtube"></ion-icon></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="section-line" />
+        <p class="copyright">© 2026 JLK Empire.</p>
+      </div>
+    </div>
+    <!-- script here -->
+    <script src="js/cart.js"></script>
+    <script src="js/cart-page.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="js/dropdown.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/product-page.js"></script>
+    <script src="js/scrollTopBtn.js"></script>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Product added successful ✅</div>
+    <!-- scrollToBtn -->
+    <button id="scrollTopBtn">&#94;</button>
+
+    <!-- It captures the product details when an image is clicked. -->
+    <!-- this is design for product-page.html -->
+    <script>
+      document.querySelectorAll(".product-link").forEach((item) => {
+        item.addEventListener("click", function () {
+          // Create an object with the product data from the clicked image
+          const productData = {
+            id: this.getAttribute("data-id"),
+            name: this.getAttribute("data-name"),
+            price: this.getAttribute("data-price"),
+            image: this.getAttribute("data-image"),
+            description: this.getAttribute("data-description") || "",
+          };
+
+          // Save it to localStorage
+          localStorage.setItem("selectedProduct", JSON.stringify(productData));
+
+          // Redirect to the product page
+          window.location.href = "product-page.html";
+        });
+      });
+    </script>
+    <script src="js/auth.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/search-results.js"></script>
+  </body>
+</html>

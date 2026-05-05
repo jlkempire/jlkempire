@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Success</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/success.css" />
+
+    <!-- Goodle font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- navebar -->
+      <div class="min-container-navbar">
+        <div class="navbar">
+          <!-- Logo -->
+          <a href="index.html">
+            <img class="logo-icon" src="logo/JLK-LOGO.png" width="45px" />
+          </a>
+
+          <!-- Search -->
+          <div class="search-box">
+            <input
+              id="mainSearchInput"
+              type="text"
+              placeholder="Search for products, brands and categories..."
+              autocomplete="off" />
+            <div id="searchSuggestions" class="suggestions-dropdown"></div>
+          </div>
+          <ion-icon
+            id="searchIconBtn"
+            class="search-icon"
+            name="search-outline"
+            style="cursor: pointer"></ion-icon>
+
+          <!-- Account -->
+          <!-- <div class="drop-menu" id="accountToggle">
+            <ion-icon name="person-outline"></ion-icon>
+            <p id="accountName">Account</p>
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </div>
+
+          <div class="account-dropdown hidden" id="accountDropdown"></div> -->
+
+          <!-- Right side -->
+          <div class="nav-right">
+            <!-- Cart -->
+            <a href="cart.html" class="cart">
+              <ion-icon name="cart-outline" style="font-size: 23px"></ion-icon>
+              <span class="cart-count">0</span>
+              <p>Cart</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- SUCCESS MESSAGE -->
+      <div class="success-box">
+        <div class="success-icon">✔</div>
+
+        <div class="success-text">
+          <h2>Thank you for placing an order on JLK Empire!</h2>
+          <p id="order-number">Order Nº 1284458532</p>
+        </div>
+
+        <a href="index.html"
+          ><button class="details-btn">START NEW SHOPPING</button></a
+        >
+      </div>
+
+      <!-- DELIVERY + PAYMENT -->
+
+      <div class="info-row">
+        <div class="info-card">
+          <h4><i class="fa-solid fa-truck"></i>Door Delivery!</h4>
+          <!-- <p>Door Delivery. Fulfilled by James</p> -->
+          <!-- <p>Delivery between 12 March and 13 March.</p> -->
+        </div>
+        <div class="info-card">
+          <h4>
+            <i class="fa-solid fa-sack-dollar"></i>Pay on delivery: With bank
+            transfer or cash
+          </h4>
+          <p>You can pay through bank transfer or cash.</p>
+          <p>Simply inform the delivery agent.</p>
+        </div>
+      </div>
+
+      <!-- RECOMMENDED PRODUCTS -->
+
+      <h3 class="section-title">Recommended for you</h3>
+
+      <div class="products" id="recommended-container"></div>
+    </div>
+    <!-- Add Clerk Script -->
+    <script
+      async
+      crossorigin="anonymous"
+      data-clerk-publishable-key="pk_test_c21hc2hpbmctaGFsaWJ1dC04LmNsZXJrLmFjY291bnRzLmRldiQ"
+      src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="js/dropdown.js"></script>
+    <script src="js/cart.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. AUTO-GENERATE ORDER NUMBER
+        const orderNumberElement = document.getElementById("order-number");
+        const customID =
+          "JLK-" + Math.random().toString(36).substring(2, 9).toUpperCase();
+
+        if (orderNumberElement) {
+          orderNumberElement.innerText = "Order Nº " + customID;
+        }
+
+        // 2. Your Product Database
+        const myProducts = [
+          {
+            name: "Tecno Spark 10 Pro - 6.8-inch display - 8GB RAM - 256GB ROM",
+            price: 300000,
+            img: "Pictures/p1.png",
+          },
+          {
+            name: "Apple iPhone 17 Pro - 256GB - Cosmic Orange E-sim",
+            price: 1722950,
+            img: "Pictures/p2.png",
+          },
+          {
+            name: "Apple iPhone 12 Pro Max - 6.7-inch - 128GB ROM+6GB RAM - Single Sim - 3687mah - Pouch & Screen Protector-Graphite",
+            price: 629000,
+            img: "Pictures/p3.png",
+          },
+          {
+            name: "Apple iPhone 15 Pro Max - 6.7-inch 256GB ROM - 8GB RAM - 1 Sim + Esim -5g - 4441mAh",
+            price: 1389999,
+            img: "Pictures/p4.png",
+          },
+          {
+            name: "Apple iPhone 15 Pro 6.1-inch - 256GB ROM + 8GB RAM - Nano Sim - 5g",
+            price: 1179999,
+            img: "Pictures/p5.png",
+          },
+          {
+            name: "Tecno Spark 10 Pro - 6.8-inch display - 8GB RAM - 256GB ROM",
+            price: 300000,
+            img: "Pictures/p1.png",
+          },
+        ];
+
+        // 3. Function to shuffle and pick 4 products
+        const displayRecommendations = () => {
+          const container = document.getElementById("recommended-container");
+          if (!container) return;
+
+          const shuffled = myProducts.sort(() => 0.5 - Math.random());
+          const selected = shuffled.slice(0, 4);
+
+          container.innerHTML = selected
+            .map(
+              (product) => `
+        <div class="product">
+          <img src="${product.img}" onerror="this.src='logo/JLK-LOGO.png'" />
+          <p>${product.name}</p>
+          <span>₦${product.price.toLocaleString()}</span>
+        </div>
+      `
+            )
+            .join("");
+        };
+
+        displayRecommendations();
+
+        // --- NEW: RESET CART ---
+        // This clears the saved items so the cart is empty for the next shopping trip
+        localStorage.removeItem("cart");
+
+        // This updates the red/orange bubble in your navbar to 0
+        const cartCountElement = document.querySelector(".cart-count");
+        if (cartCountElement) {
+          cartCountElement.innerText = "0";
+        }
+      });
+    </script>
+    <script src="js/search.js"></script>
+  </body>
+</html>
