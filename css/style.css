@@ -812,6 +812,10 @@ input {
   /* .footer {
     margin-top: 50px;
   } */
+
+  #scrollTopBtn {
+    display: none;
+  }
 }
 
 /* styling the search bar dropdown when typing */
